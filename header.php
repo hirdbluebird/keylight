@@ -23,9 +23,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="font/ostrich-sans.css">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <!-- <link rel="stylesheet/less" type="text/css" href="css/main.less"> -->
 
