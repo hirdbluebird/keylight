@@ -24,21 +24,20 @@
     <meta name="viewport" content="width=device-width">
 
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <!-- <link rel="stylesheet/less" type="text/css" href="css/main.less"> -->
 
-    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <!-- <script src="js/less-1.4.1.min.js"></script> -->
     <?php wp_head(); ?>
 </head>
 
 <body data-nicescroll="1" class="loading" <?php body_class(); ?>>
-    <div class="globalpreloader"></div>
+    <!-- <div class="globalpreloader"></div> -->
     <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
+
+    
     <div class="nav-container">
         <div class="wrapper">
-            <a href="#" class="logo top"><img src="img/samples/logo.png" height="47" width="145" alt=""></a>
+            <a href="#" class="logo top"><img src="<?php if ( get_field('logo', get_the_ID()) != '' ) { the_field('logo', get_the_ID()); } ?>" height="47" width="145" alt=""></a>
             <nav id="mainnav" class="mainnav">
                 <ul>
                     <li><a href="#start">Start</a></li>

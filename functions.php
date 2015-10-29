@@ -548,11 +548,6 @@ function theme_name_scripts() {
 	wp_enqueue_script( 'detectmobilebrowser', get_template_directory_uri() . 'js/plugins/detectmobilebrowser.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'nivo-lightbox', 	  get_template_directory_uri() . 'js/plugins/nivo-lightbox/nivo-lightbox.min.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'maps', 'http://maps.googleapis.com/maps/api/js?sensor=false', array(), '1.0.0', true );
-
-
-
-
-	<script src=""></script>
 }
 
 add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
@@ -593,9 +588,9 @@ function twentythirteen_scripts_styles() {
 	wp_style_add_data( 'twentythirteen-ie', 'conditional', 'lt IE 9' );
 
 	//Load custom stylesheet
-	wp_enqueue_style( 'normalize', get_template_directory_uri() . 'css/normalize.min.css', array( 'twentythirteen-style' ), '2013-07-18' );
-	wp_enqueue_style( 'main',      get_template_directory_uri() . 'css/main.css', array( 'twentythirteen-style' ), '2013-07-18' );
-	wp_enqueue_style( 'ostrich',   get_template_directory_uri() . 'font/ostrich-sans.css', array( 'twentythirteen-style' ), '2013-07-18' );
+	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.min.css', array( 'twentythirteen-style' ), '2013-07-18' );
+	wp_enqueue_style( 'main',      get_template_directory_uri() . '/css/main.css', array( 'twentythirteen-style' ), '2013-07-18' );
+	wp_enqueue_style( 'ostrich',   get_template_directory_uri() . '/font/ostrich-sans.css', array( 'twentythirteen-style' ), '2013-07-18' );
 }
 add_action( 'wp_enqueue_scripts', 'twentythirteen_scripts_styles' );
 

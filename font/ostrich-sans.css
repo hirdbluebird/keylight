@@ -1,0 +1,23 @@
+/* Ostrich Sans */
+@font-face {
+    font-family: 'Ostrich Sans';
+    src: url('ostrich-regular.eot');
+    src: url('ostrich-regular.eot?#iefix') format('embedded-opentype'),
+         url('ostrich-regular.woff') format('woff'),
+         url('ostrich-regular.ttf') format('truetype'),
+         url('ostrich-regular.svg#ostrich_sansmedium') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Ostrich Sans';
+    src: url('ostrich-black.eot');
+    src: url('ostrich-black.eot?#iefix') format('embedded-opentype'),
+         url('ostrich-black.woff') format('woff'),
+         url('ostrich-black.ttf') format('truetype'),
+         url('ostrich-black.svg#ostrich_sansblack') format('svg');
+    font-weight: 900;
+    font-style: normal;
+
+}
