@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>Documentation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="navbar-fixed-top.css" rel="stylesheet">
+    <link href="prettify.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-spy="scroll" data-target="#vernav">
+    
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Keylight</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Documentation</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://themeforest.net/item/keylight-light-flat-portfolio/5674957?ref=TardigradeStudio"><span class="glyphicon glyphicon-star"></span> Rate this item on Themeforest</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+      <div class="well subheader">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4" style="padding-top: 3px">
+              <a href="https://twitter.com/boyankostov" class="twitter-follow-button" data-show-count="false">Follow @boyankostov</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://themeforest.net/item/keylight-light-flat-portfolio/5674957?ref=TardigradeStudio" data-text="Check out Keylight - really cool portfolio one page template" data-via="boyankostov">Tweet</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+              
+            </div>
+            <div class="col-md-8"><p class="notice"><span class="glyphicon glyphicon-info-sign"></span> There's an up to date version of this documentation on <a href="http://help.tardigradestudio.com/keylight">http://help.tardigradestudio.com/keylight</a>.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container main-container">
+        <div class="row">
+          <div class="col-md-3" id="vernav">
+            <div class="sidebar hidden-print" data-spy="affix" data-offset-top="65">
+              <ul class="nav">
+                <li class="active"><a href="#general"><span class="glyphicon glyphicon-th-large"></span> General Layout</a></li>
+                <li><a href="#colors"><span class="glyphicon glyphicon-adjust"></span> Changing Colors</a></li>
+                <li><a href="#backgrounds"><span class="glyphicon glyphicon-picture"></span> Background Images</a></li>
+                <li><a href="#sliderandtabs"><span class="glyphicon glyphicon-th-list"></span> Slider &amp; Tabs</a></li>
+                <li><a href="#knobs"><span class="glyphicon glyphicon-record"></span> Knob Elements</a></li>
+                <li><a href="#map"><span class="glyphicon glyphicon-map-marker"></span> Setting up the Map</a></li>
+                <li><a href="#video"><span class="glyphicon glyphicon-facetime-video"></span> Adding a Video</a></li>
+                <li><a href="#dribbble"><span class="glyphicon glyphicon-th"></span> Dribbble Feed</a></li>
+                <li><a href="#contact"><span class="glyphicon glyphicon-envelope"></span> Setting up the Contact Form</a></li>
+                <li><a href="#licensing"><span class="glyphicon glyphicon-bullhorn"></span> Licensing</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="section">
+              <div class="page-header">
+                <h1 id="general">General Layout</h1>
+              </div>
+              <p class="lead">Keylight is based on groups of content and content containers.</p>
+              <p>If you take a closer look at the code sample below, you'll see that a .content-container can reside alone or within a .container-group. That's because .container-group elements have background images with the parallax effect and the image needs to go under two .content-container elements, rather than one.</p>
+              <p><strong>That's the basic structure of the template:</strong></p>
+              <code class="prettyprint">
+                &lt;body&gt;<br />  &lt;div class=&quot;nav-container&quot;&gt;&lt;/div&gt;<br />   &lt;div id=&quot;section1&quot; class=&quot;section container-group&quot;&gt;<br />     &lt;div class=&quot;subheader-container&quot;&gt;&lt;/div&gt;<br />     &lt;div class=&quot;content-container&quot;&gt;&lt;/div&gt;<br />   &lt;/div&gt;<br /> <br />   &lt;div id=&quot;section2&quot; class=&quot;section content-container&quot;&gt;&lt;/div&gt;<br /> &lt;/body&gt;
+              </code>
+            </div>
+
+            <div class="section">
+              <div class="page-header">
+                <h1 id="colors">Changing colors</h1>
+              </div>
+              <p class="lead">Keylight is built on LESS which makes it fairly easy to change the main colors of the template.</p>
+              <p>Just open css/main.less and change the variables you need. They start at the beginning of the document and are marked as follows:</p>
+              <code class="prettyprint">
+                @color1: #18c08f;<br>@color2: #9a7192;<br>@grey: #e2e2e2;
+              </code>
+              <p>After changing the values, you have to compile the LESS file. You can use the Crunch App for this, which can be downloaded here: <a href="http://crunchapp.net/">http://crunchapp.net/</a></p>
+              <p class="lead">You can also use LESS directly on the template by uncommenting these two lines in the head section:</p>
+              <code class="prettyprint">
+                &lt;!-- &lt;link rel=&quot;stylesheet/less&quot; type=&quot;text/css&quot; href=&quot;css/main.less&quot;&gt; --&gt;
+              </code>
+              <p>and</p>
+              <code class="prettyprint">
+                &lt;!-- &lt;script src=&quot;js/less-1.4.1.min.js&quot;&gt;&lt;/script&gt; --&gt;
+              </code>
+            </div>
+
+            <div class="section">
+              <div class="page-header">
+                <h1 id="backgrounds">Background Images</h1>
+              </div>
+              <p class="lead">Background Images can either use the Parallax plugin, or just be fixed to the background.</p>
+              <p>They are added inline within the HTML on either a .container-group or a .content-container element. You can also combine these two and add an additional .color1 or .color2 class to the child .content-container element to have a color faded background image. Here's the example:</p>
+              <code class="prettyprint">
+                &lt;div id=&quot;video&quot; class=&quot;section container-group clearfix&quot; style=&quot;background-image: url(img/samples/background-2.jpg)&quot;&gt;<br />             &lt;div class=&quot;content-container color1&quot;&gt;<br />                 &lt;div class=&quot;wrapper padding-large clearfix center-text video&quot;&gt;<br />                 &lt;/div&gt; &lt;!-- .wrapper --&gt;<br />             &lt;/div&gt; &lt;!-- .content-container --&gt;      <br />         &lt;/div&gt;
+              </code>
+              <p>According to the class you add to .content-container or .container-group, the background color can be default(dark grey, when you add no class), white(.white), grey(.grey), color1(.color1) or color2(.color2). This will also define the color of the text in these elements. You can change text color with LESS variables.</p>
+
+              <p><strong>Note:</strong> Use the included PSD when you make background images. It has a faded black overlay and the recommended dimensions (1950x1200).</p>
+            </div>
+
+            <div class="section">
+              <div class="page-header">
+                <h1 id="sliderandtabs">Slider &amp; Tabs</h1>
+              </div>
+              <p class="lead">All carousels in this template are made with CarouFredsel - <a href="http://caroufredsel.dev7studios.com/">http://caroufredsel.dev7studios.com/</a></p>
+              <p>Please take a closer look at this plugin's configuration documentation if you want to modify some of the carousels.</p>
+              <p>The plugin is used on:</p>
+              <ul>
+                <li>The portfolio section - uses the whole width of the window and lowers the number of items visible according to the width of the window</li>
+                <li>The quotes sections - a single item carousel</li>
+                <li>The single portfolio item - again a single item carousel, but with boxed image</li>
+              </ul>
+            </div>
+
+            <div class="section">
+              <div class="page-header">
+                <h1 id="knobs">Knob Elements</h1>
+              </div>
+              <p class="lead">We're using a modified version of jQuery Knob for the knob elements at the top of the page. <a href="http://anthonyterrien.com/knob/">http://anthonyterrien.com/knob/</a></p>
+              <p>Because this plugin is not responsive, we're not changing the size of the knobs when resolution gets lower, just rearranging them. If you want to add an additional knob, you'll have to edit a bit the layout, use fourths instead of thirds and retest for mobile.</p>
+            </div>
+
+            <div class="section">
+              <div class="page-header">
+                <h1 id="map">Setting up the Map</h1>
+              </div>
+              <p class="lead">This template is using the standart Google Maps API.</p>
+              <p>It's also using a customized color skin on top. You can find a lot of samples and code snippets here: <a href="https://developers.google.com/maps/documentation/javascript/examples/">https://developers.google.com/maps/documentation/javascript/examples/</a></p>
+              <p>If you just want to change the address, open js/main.js and navigate to /* Map */. If you inspect the code below you'll find a line (center: new google.maps.LatLng(48.855, 2.341418),) - that is where the screen will be centered. A little bit below is this line (var myLatLng = new google.maps.LatLng(48.855, 2.341418);) - that's where the pin will be placed.</p>
+              <p>You can find out your coordinates by opening Google Maps and observing the URL in the address bar.</p>
+            </div>
+
+            <div class="section">
+              <div class="page-header">
+                <h1 id="video">Adding a Video</h1>
+              </div>
+              <p class="lead">Adding a video is pretty easy.</p>
+              <p>First of all don't forget to set a .video class on the .wrapper element, because otherwise it won't be responsive. Then just go to Youtube/Vimeo and choose to share/embed a video. Copy the code within the .wrapper element.</p>
+            </div>
+
+            <div class="section">
+              <div class="page-header">
+                <h1 id="dribbble">Dribbble Feed</h1>
+              </div>
+              <p class="lead">There's a bonus Dribbble feed plugin included in the template.</p>
+              <p>You can find the Dribbble feed version of the template if you open index-dribbble.html from the download package. It's not included in the original preview because it slows down the whole template when it's combined with all of the other elements. If you replace the portfolio with it, though, you can get some pretty good results. Click the Dribbble button from the top navigation to see it.</p>
+
+              <p>To change the username, open js/main.js and under /* Dribble list */ change boyankostov to the desired username.</p>
+            </div>
+
+            <div class="section">
+              <div class="page-header">
+                <h1 id="contact">Setting up the Contact Form</h1>
+              </div>
+              <p class="lead">The contact form is based on the jQuery Validation Plugin - <a href="https://github.com/jzaefferer/jquery-validation">https://github.com/jzaefferer/jquery-validation</a> and the jQuery Form plugin <a href="http://jquery.malsup.com/form/">http://jquery.malsup.com/form/</a>.</p>
+              <p>Open process.php to change the email. If you want to use SMTP instead of php mail() you'll have to rely on PHP Mailer, Swift Mailer or another package and set it up manually.</p>
+            </div>
+
+            <div class="section">
+              <div class="page-header">
+                <h1 id="licensing">Licensing</h1>
+              </div>
+              <h3>Fonts</h3>
+              <ul>
+                <li>Ostrich Sans - Open Font License <a href="https://www.theleagueofmoveabletype.com/ostrich-sans">https://www.theleagueofmoveabletype.com/ostrich-sans</a></li>
+                <li>FontAwesome - SIL OFL 1.1, <a href="http://fortawesome.github.io/Font-Awesome/">http://fortawesome.github.io/Font-Awesome/</a></li>
+              </ul>
+
+              <h3>Frameworks &amp; Plugins</h3>
+              <ul>
+                <li>LESS - Copyright (c) 2009-2013, Alexis Sellier, Licensed under the Apache 2.0 License, <a href="">http://lesscss.org</a></li>
+                <li>jQuery - (c) 2005, 2013 jQuery Foundation, Inc. | jquery.org/license, <a href="http://jquery.com/">http://jquery.com/</a></li>
+                <li>Modernizr - Modernizr 2.6.2 (Custom Build) | MIT & BSD, <a href="http://modernizr.com/">http://modernizr.com/</a></li>
+                <li>Respond.js - v1.1.0: min/max-width media query polyfill. (c) Scott Jehl. MIT/GPLv2 Lic, <a href="http://j.mp/respondjs">http://j.mp/respondjs</a></li>
+                <li></li>
+                <li>Nivo Lightbox - Copyright 2013, Dev7studios, Free to use and abuse under the MIT license, <a href="http://dev7studios.com/nivo-lightbox">http://dev7studios.com/nivo-lightbox</a></li>
+                <li>Autosize - (c) 2013 Jack Moore, MIT License, <a href="http://www.jacklmoore.com/autosize">http://www.jacklmoore.com/autosize</a></li>
+                <li>jQuery carouFredSel - Copyright (c) 2013 Fred Heusschen, <a href="http://caroufredsel.dev7studios.com">http://caroufredsel.dev7studios.com</a></li>
+                <li>jQuery EasyTabs - Copyright (c) 2010-2011 Steve Schwartz (JangoSteve), <a href="http://os.alfajango.com/easytabs/">http://os.alfajango.com/easytabs/</a></li>
+                <li>FitVids - Copyright 2013, Chris Coyier - <a href="http://css-tricks.com">http://css-tricks.com</a> + Dave Rupert - <a href="http://daverupert.com">http://daverupert.com</a>, Credit to Thierry Koblentz - <a href="http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/">http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/</a>, Released under the WTFPL license - <a href="http://sam.zoy.org/wtfpl/">http://sam.zoy.org/wtfpl/</a>. <a href="http://fitvidsjs.com/">http://fitvidsjs.com/</a></li>
+                <li>jQuery Form Plugin - Copyright (c) 2013 M. Alsup; Dual licensed: MIT/GPL <a href="http://jquery.malsup.com/form/">http://jquery.malsup.com/form/</a></li>
+                <li>Imagesloaded - mit license. paul irish. 2010. <a href="https://github.com/desandro/imagesloaded">https://github.com/desandro/imagesloaded</a></li>
+                <li>jQuery Inview - WTFPL, https://github.com/protonet/jquery.inview</li>
+                <li>jRibbble - MIT License, <a href="http://lab.tylergaw.com/jribbble/">http://lab.tylergaw.com/jribbble/</a></li>
+                <li>jQuery Knob - Copyright (c) 2012 Anthony Terrien, Under MIT and GPL licenses, <a href="http://anthonyterrien.com/knob/">http://anthonyterrien.com/knob/</a></li>
+                <li>jQuery Nicescroll - Licensed under the MIT, Copyright 2011-12-13 InuYaksa*2013, <a href="https://github.com/inuyaksa/jquery.nicescroll">https://github.com/inuyaksa/jquery.nicescroll</a></li>
+                <li>jQuery Parallax - Author: Ian Lunn, Dual licensed under the MIT and GPL licenses, <a href="http://www.ianlunn.co.uk/plugins/jquery-parallax/">http://www.ianlunn.co.uk/plugins/jquery-parallax/</a></li>
+                <li>jQuery scrollTo - Copyright (c) 2007-2012 Ariel Flesler - aflesler(at)gmail(dot)com | <a href="http://flesler.blogspot.com">http://flesler.blogspot.com</a>, <a href="http://flesler.blogspot.com/2007/10/jqueryscrollto.html">http://flesler.blogspot.com/2007/10/jqueryscrollto.html</a></li>
+                <li>Single Page Nav Plugin - Copyright (c) 2013 Chris Wojcik, Dual licensed under MIT and GPL, <a href="https://github.com/ChrisWojcik/single-page-nav">https://github.com/ChrisWojcik/single-page-nav</a></li>
+                <li>Google Maps API - License - <a href="https://developers.google.com/maps/licensing">https://developers.google.com/maps/licensing</a></li>
+                <li>touchSwipe - jQuery Plugin - Copyright (c) 2010 Matt Bryson (www.skinkers.com), Dual licensed under the MIT or GPL Version 2 licenses, <a href="https://github.com/mattbryson/TouchSwipe-Jquery-Plugin">https://github.com/mattbryson/TouchSwipe-Jquery-Plugin</a></li>
+                <li>jQuery Validation Plugin - Copyright (c) 2013 Jörn Zaefferer; Licensed MIT, <a href="https://github.com/jzaefferer/jquery-validation">https://github.com/jzaefferer/jquery-validation</a></li>
+                <li>responsive-nav.js - by @viljamis, MIT license, <a href="http://responsive-nav.com">http://responsive-nav.com</a></li>
+                <li>jQuery Simple Slider: Unobtrusive Numerical Slider - Copyright (c) 2013 James Smith (http://loopj.com), Licensed under the MIT license (http://mit-license.org/), <a href="http://loopj.com/jquery-simple-slider/">http://loopj.com/jquery-simple-slider/</a></li>
+                <li>jQuery.browser.mobile - Detect Mobile Browser was created by Chad Smith, This is free and unencumbered software released into the public domain, <a href="http://detectmobilebrowser.com/">http://detectmobilebrowser.com/</a></li>
+                <li>jquery.fixClient - By Icavia http://icavia.com/, MIT Licensed.</li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+    <script src="dist/js/run_prettify.js"></script>
+    <script type="text/javascript">
+      $(window).load(function(){
+        $('.globalpreloader').fadeOut();
+      });
+      $(document).ready(function() {
+        $('.sidebar .nav li a').click(function() {
+          $.scrollTo($(this).attr("href"), {duration: 500});
+          return false;
+        })
+      });
+    </script>
+  </body>
+</html>

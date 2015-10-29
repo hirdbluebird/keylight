@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>JustFlat</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="font/ostrich-sans.css">
+        
+        <style>
+html{
+    background: rgb(101, 92, 137);
+        font-family: "Lato", sans-serif;
+}
+a:active,a:focus {
+    outline: expression(hideFocus='true');
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+#wrapper {
+    width: 960px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+#tabs,#tabs2,#tabs3,#tabs4,#tabs5 {
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+#tabs li,#tabs2 li,#tabs3 li,#tabs4 li,#tabs5 li {
+    float: left;
+    margin-right: 2px;
+}
+
+#tabs li a,#tabs2 li a,#tabs3 li a,#tabs4 li a,#tabs5 li a {
+    display: block;
+    padding: 17px 30px;
+    background: #544f6b;
+    text-decoration: none;
+    color: #8478B3;
+}
+
+#tabs li a:hover,#tabs2 li a:hover,#tabs3 li a:hover,#tabs4 li a:hover,#tabs5 li a:hover {
+    background: rgb(78, 74, 99);
+}
+
+#tabs_container {
+    padding: 10px 40px 20px 40px;
+    overflow: hidden;
+    position: relative;
+    background: white;
+}
+
+#tabs_container div {
+    margin-right: 40px;
+}
+
+.transition {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+
+    -webkit-transition-delay: .3s;
+    -moz-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    -ms-transition-delay: .3s;
+    transition-delay: .3s;
+}
+
+.make_transist {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.hidescale {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.showscale {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+
+    -webkit-transition-delay: .3s;
+    -moz-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    -ms-transition-delay: .3s;
+    transition-delay: .3s;
+}
+
+.hideleft {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.showleft {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+
+    -webkit-transition-delay: .3s;
+    -moz-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    -ms-transition-delay: .3s;
+    transition-delay: .3s;
+}
+
+.hidescaleup {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.showscaleup {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+
+    -webkit-transition-delay: .3s;
+    -moz-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    -ms-transition-delay: .3s;
+    transition-delay: .3s;
+}
+
+.hideflip {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+
+    -webkit-transform: rotatey(-90deg) scale(1.1);
+    -moz-transform: rotatey(-90deg) scale(1.1);
+    -o-transform: rotatey(-90deg) scale(1.1);
+    -ms-transform: rotatey(-90deg) scale(1.1);
+    transform: rotatey(-90deg) scale(1.1);
+
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.showflip {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+
+    -webkit-transition-delay: .3s;
+    -moz-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    -ms-transition-delay: .3s;
+    transition-delay: .3s;
+
+    -webkit-transform: rotatey(0deg) scale(1);
+    -moz-transform: rotatey(0deg) scale(1);
+    -o-transform: rotatey(0deg) scale(1);
+    -ms-transform: rotatey(0deg) scale(1);
+    transform: rotatey(0deg) scale(1);
+
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.tabulous_active {
+    background: white !important;
+    color: #655c89 !important;
+}
+
+.tabulousclear {
+    display: block;
+    clear: both;
+}
+        </style>
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        
+    </head>
+    <body data-nicescroll="1" class="loading">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="quote" class="container-group" style="background-image: url(img/samples/background-2.jpg)">
+
+
+            <div id="us" class="section content-container color2 clearfix">
+                <div class="wrapper padding clearfix">
+                    <div id="tabs" class="width70">
+                        <ul>
+                            <li><a href="#tabs-1" title="">Our motto</a></li>
+                            <li><a href="#tabs-2" title="">The story</a></li>
+                            <li><a href="#tabs-3" title="">The office</a></li>
+                        </ul>
+
+                        <div id="tabs_container" class="clearfix">
+                            <div id="tabs-1">
+                                    <p class="bigger">No true fiasco ever began as a quest for mere adequacy. A motto of the British Special Air Force is: 'Those who risk, win.' A single green vine shoot is able to grow through cement. The Pacific Northwestern salmon beats itself bloody on it's quest to travel hundreds of miles upstream against the current, with a single purpose, sex of course, but also... life</p>
+                                    <hr class="width30 center">
+                                    <p class="bigger"><a href="" class="dashed bold">See what we can do for you</a></p>
+                            </div>
+                            <div id="tabs-2">
+                                    <p class="bigger">Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor.</p>
+                        
+                            </div>
+                            <div id="tabs-3">
+                                    <p class="bigger">Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem.</p><p> Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales.</p>
+                            </div>
+                        </div><!--End tabs container-->
+                    </div><!--End tabs-->
+
+                </div> <!-- .wrapper -->
+            </div> <!-- .content-container -->
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+    
+        <script src="js/plugins/tabulous.min.js"></script>
+
+
+        <script>
+            $(document).ready(function(){
+                if($("#tabs").length) {
+        $('#tabs').tabulous({
+            effect: 'scale'
+        });
+    }
+    if($(".tabbed").length) {
+        $('.tabbed').tabulous({
+            effect: 'scale'
+        });
+    }
+            });
+        </script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
