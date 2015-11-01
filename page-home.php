@@ -106,23 +106,23 @@ get_header(); ?>
 		                <div class="wrapper padding">
 		                    <div id="tabs" class="tabs width70">
 		                        <ul>
-		                            <li><a href="#tabs-1" title="">Our motto</a></li>
-		                            <li><a href="#tabs-2" title="">The story</a></li>
-		                            <li><a href="#tabs-3" title="">The office</a></li>
+		                            <li><a href="#tabs-1" title=""><?php if ( get_field('tab-1', get_the_ID()) != '' ) { the_field('tab-1', get_the_ID()); } ?></a></li>
+		                            <li><a href="#tabs-2" title=""><?php if ( get_field('tab-2', get_the_ID()) != '' ) { the_field('tab-2', get_the_ID()); } ?></a></li>
+		                            <li><a href="#tabs-3" title=""><?php if ( get_field('tab-3', get_the_ID()) != '' ) { the_field('tab-3', get_the_ID()); } ?></a></li>
 		                        </ul>
 
 		                        <div id="tabs_container" class="clearfix">
 		                            <div id="tabs-1">
-		                                    <p class="bigger">No true fiasco ever began as a quest for mere adequacy. A motto of the British Special Air Force is: 'Those who risk, win.' A single green vine shoot is able to grow through cement. The Pacific Northwestern salmon beats itself bloody on it's quest to travel hundreds of miles upstream against the current, with a single purpose, sex of course, but also... life</p>
+		                                    <p class="bigger"><?php if ( get_field('tab-1-text', get_the_ID()) != '' ) { the_field('tab-1-text', get_the_ID()); } ?></p>
 		                                    <hr class="width30 center">
 		                                    <p class="bigger"><a href="#" class="dashed bold"></a></p>
 		                            </div>
 		                            <div id="tabs-2">
-		                                    <p class="bigger">Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor.</p>
+		                                    <p class="bigger"><?php if ( get_field('tab-2-text', get_the_ID()) != '' ) { the_field('tab-2-text', get_the_ID()); } ?></p>
 		                        
 		                            </div>
 		                            <div id="tabs-3">
-		                                    <p class="bigger">Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem.</p><p> Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales.</p>
+		                                    <p class="bigger"><?php if ( get_field('tab-3-text', get_the_ID()) != '' ) { the_field('tab-3-text', get_the_ID()); } ?></p><p><?php if ( get_field('tab-3-subtext', get_the_ID()) != '' ) { the_field('tab-3-subtext', get_the_ID()); } ?></p>
 		                            </div>
 		                        </div><!--End tabs container-->
 		                    </div><!--End tabs-->
