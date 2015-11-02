@@ -152,57 +152,69 @@ get_header(); ?>
 
 		        <div class="content-container grey solid">
 		            <div class="wrapper padding-small">
-		                <h2 class="title center-text"><?php if (get_field('employee-title', get_the_ID() != '') { the_field('employee-title', get_the_ID()); } ?></h2>
+		                <h2 class="title center-text"><?php if ( get_field('employee-title', get_the_ID()) != '') { the_field('employee-title', get_the_ID()); } ?></h2>
 		                <div class="row">
 		                    <div class="third">
 		                        <div class="about">
 		                            <a class="circle">
-		                                <span class="overlay"><span class="inner"><span class="text"><?php if (get_field('employee-position', get_the_ID() != '') { the_field('employee-position', get_the_ID()); } ?></span></span></span>
-		                                <img src="<?php if (get_field('employee-image', get_the_ID() != '') { the_field('employee-image', get_the_ID()); } ?>">
+		                                <span class="overlay"><span class="inner"><span class="text"><?php if ( get_field('employee-position', get_the_ID()) != '') { the_field('employee-position', get_the_ID()); } ?></span></span></span>
+		                                <img src="<?php if ( get_field('employee-image', get_the_ID()) != '') { the_field('employee-image', get_the_ID()); } ?>">
 		                            </a>
-		                            <h3><?php if (get_field('employee-name', get_the_ID() != '') { the_field('employee-name', get_the_ID()); } ?></h3>
+		                            <h3><?php if ( get_field('employee-name', get_the_ID()) != '') { the_field('employee-name', get_the_ID()); } ?></h3>
 		                            <div class="social">
 		                                <a href="#" class="rotate"><img src="img/icons/picons/32/social-042_dribbble.png" alt=""></a>
 		                                <a href="#" class="rotate"><img src="img/icons/picons/32/social-043_twitter.png" alt=""></a>
 		                                <a href="#" class="rotate"><img src="img/icons/picons/32/social-046_facebook.png" alt=""></a>
 		                            </div>
-		                            <p><?php if (get_field('employee-comment', get_the_ID() != '') { the_field('employee-comment', get_the_ID()); } ?></p>
+		                            <p><?php if ( get_field('employee-comment', get_the_ID()) != '') { the_field('employee-comment', get_the_ID()); } ?></p>
 		                        </div>
 		                    </div>
 		                    <div class="third">
 		                        <div class="about">
 		                            <a class="circle">
-		                                <span class="overlay"><span class="inner"><span class="text"><?php if (get_field('employee-position', get_the_ID() != '') { the_field('employee-position', get_the_ID()); } ?></span></span></span>
-		                                <img src="<?php if (get_field('employee-image', get_the_ID() != '') { the_field('employee-image', get_the_ID()); } ?>">
+		                                <span class="overlay"><span class="inner"><span class="text"><?php if ( get_field('employee-position', get_the_ID()) != '') { the_field('employee-position', get_the_ID()); } ?></span></span></span>
+		                                <img src="<?php if ( get_field('employee-image', get_the_ID()) != '') { the_field('employee-image', get_the_ID()); } ?>">
 		                            </a>
-		                            <h3><?php if (get_field('employee-name', get_the_ID() != '') { the_field('employee-name', get_the_ID()); } ?></h3>
+		                            <h3><?php if ( get_field('employee-name', get_the_ID()) != '') { the_field('employee-name', get_the_ID()); } ?></h3>
 		                            <div class="social">
 		                                <a href="#" class="rotate"><img src="img/icons/picons/32/social-042_dribbble.png" alt=""></a>
 		                                <a href="#" class="rotate"><img src="img/icons/picons/32/social-043_twitter.png" alt=""></a>
 		                                <a href="#" class="rotate"><img src="img/icons/picons/32/social-046_facebook.png" alt=""></a>
 		                            </div>
-		                            <p><?php if (get_field('employee-comment', get_the_ID() != '') { the_field('employee-comment', get_the_ID()); } ?></p>
+		                            <p><?php if ( get_field('employee-comment', get_the_ID()) != '') { the_field('employee-comment', get_the_ID()); } ?></p>
 		                        </div>
 		                    </div>
 		                    <div class="third">
 		                        <div class="about">
 		                            <a class="circle">
-		                                <span class="overlay"><span class="inner"><span class="text"><?php if (get_field('employee-position', get_the_ID() != '') { the_field('employee-position', get_the_ID()); } ?></span></span></span>
-		                                <img src="<?php if (get_field('employee-image', get_the_ID() != '') { the_field('employee-image', get_the_ID()); } ?>">
+		                                <span class="overlay"><span class="inner"><span class="text"><?php if ( get_field('employee-position', get_the_ID()) != '') { the_field('employee-position', get_the_ID()); } ?></span></span></span>
+		                                <img src="<?php if ( get_field('employee-image', get_the_ID()) != '') { the_field('employee-image', get_the_ID()); } ?>">
 		                            </a>
-		                            <h3><?php if (get_field('employee-name', get_the_ID() != '') { the_field('employee-name', get_the_ID()); } ?></h3>
+		                            <h3><?php if ( get_field('employee-name', get_the_ID()) != '') { the_field('employee-name', get_the_ID()); } ?></h3>
 		                            <div class="social">
 		                                <a href="#" class="rotate"><img src="img/icons/picons/32/social-042_dribbble.png" alt=""></a>
 		                                <a href="#" class="rotate"><img src="img/icons/picons/32/social-043_twitter.png" alt=""></a>
 		                                <a href="#" class="rotate"><img src="img/icons/picons/32/social-046_facebook.png" alt=""></a>
 		                            </div>
-		                            <p><?php if (get_field('employee-comment', get_the_ID() != '') { the_field('employee-comment', get_the_ID()); } ?></p>
+		                            <p><?php if ( get_field('employee-comment', get_the_ID()) != '') { the_field('employee-comment', get_the_ID()); } ?></p>
 		                        </div>
 		                    </div>
 		                </div>
 		            </div> <!-- .wrapper -->
 		        </div> <!-- .content-container -->
 
+		        <div id="quote2" class="container-group" style="background-image: url(img/samples/background-3.jpg)">
+		            <div class="content-container">
+		                <div class="wrapper padding-large center-text">
+		                    <div id="quotecarousel" class="carousel-single">
+		                        <div><p class="quote center width70"><?php if ( get_field('quotes-text', get_the_ID()) != '') { the_field('quotes-text', get_the_ID()); } ?></p></div>
+		                        <div><p class="quote center width70"><?php if ( get_field('quotes-text', get_the_ID() != '') { the_field('quotes-text'), get_the_ID()); } ?></p></div>
+		                        <div><p class="quote center width70"><?php if ( get_field('quotes-text', get_the_ID() != '') { the_field('quotes-text'), get_the_ID()); } ?></p></div>
+		                    </div>
+		                    <div id="quotecarouselnav" class="carousel-pagination carousel-single-nav"></div>
+		                </div> <!-- .wrapper -->
+		            </div> <!-- .content-container -->      
+		        </div>
 				<?php the_content(); ?>
 			
 
