@@ -101,7 +101,7 @@ get_header(); ?>
 		                    <a href="#pricing" class="scrollto btn color1"><?php if ( get_field('quote_1', get_the_ID()) != '' ) { the_field('quote_1', get_the_ID()); } ?></a>
 		                </div> <!-- .wrapper -->
 		            </div> <!-- .content-container -->
-
+		            <?php echo var_dump( get_field('quote_1', get_the_ID())); ?>
 		            <div id="us" class="section content-container color2">
 		                <div class="wrapper padding">
 		                    <div id="tabs" class="tabs width70">
