@@ -301,6 +301,13 @@ get_header(); ?>
 		            </div> <!-- .content-container -->      
 		        </div>
 
+
+		        <div id="contact" class="footer section content-container color2 solid">
+		            <div class="wrapper padding-small">
+		                <h2 class="container title">I'm going to make him an offer he can't refuse.</h2>
+		                <?php if ( get_field('user-form', get_the_ID()) != '' ) { the_field('user-form', get_the_ID()); } ?>
+		            </div>
+		        </div>
 				<?php the_content(); ?>
 			
 				<?php //comments_template(); ?>
