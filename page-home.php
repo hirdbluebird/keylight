@@ -208,13 +208,46 @@ get_header(); ?>
 		                <div class="wrapper padding-large center-text">
 		                    <div id="quotecarousel" class="carousel-single">
 		                        <div><p class="quote center width70"><?php if ( get_field('quotes-text', get_the_ID()) != '') { the_field('quotes-text', get_the_ID()); } ?></p></div>
-		                        <div><p class="quote center width70"><?php if ( get_field('quotes-text', get_the_ID() != '') { the_field('quotes-text'), get_the_ID()); } ?></p></div>
-		                        <div><p class="quote center width70"><?php if ( get_field('quotes-text', get_the_ID() != '') { the_field('quotes-text'), get_the_ID()); } ?></p></div>
+		                        <div><p class="quote center width70"><?php if ( get_field('quotes-text', get_the_ID()) != '') { the_field('quotes-text', get_the_ID()); } ?></p></div>
+		                        <div><p class="quote center width70"><?php if ( get_field('quotes-text', get_the_ID()) != '') { the_field('quotes-text', get_the_ID()); } ?></p></div>
 		                    </div>
 		                    <div id="quotecarouselnav" class="carousel-pagination carousel-single-nav"></div>
 		                </div> <!-- .wrapper -->
 		            </div> <!-- .content-container -->      
 		        </div>
+
+		        <div id="products" class="section content-container grey relative narrow-carousel">
+		            <div class="wrapper padding center-text">
+		                <div class="container">
+		                    <div id="singleportfoliocarousel" class="carousel-single">
+		                        <div class="box">
+		                            <div class="img"><img src="<?php if ( get_field('carousel-image', get_the_ID()) != '') { the_field('carousel-image', get_the_ID()); } ?>" alt=""></div>
+		                            <div class="inner clearfix">
+		                                <h2 class="right-text-d lead"><?php if ( get_field('carousel-title', get_the_ID()) != '') { the_field('carousel-title', get_the_ID()); } ?></h2>
+		                                <p class="bigger"><?php if ( get_field('carousel-text', get_the_ID()) !='') { the_field('carousel-text', get_the_ID()); } ?></p>
+		                            </div>
+		                        </div>
+		                        <div class="box">
+		                            <div class="img"><img src="<?php if ( get_field('carousel-image', get_the_ID()) != '') { the_field('carousel-image', get_the_ID()); } ?>" alt=""></div>
+		                            <div class="inner clearfix">
+		                                <h2 class="right-text-d lead"><?php if ( get_field('carousel-title', get_the_ID()) != '') { the_field('carousel-title', get_the_ID()); } ?></h2>
+		                                <p class="bigger"><?php if ( get_field('carousel-text', get_the_ID()) !='') { the_field('carousel-text', get_the_ID()); } ?></p>
+		                            </div>
+		                        </div>
+		                        <div class="box">
+		                            <div class="img"><img src="<?php if ( get_field('carousel-image', get_the_ID()) != '') { the_field('carousel-image', get_the_ID()); } ?>" alt=""></div>
+		                            <div class="inner clearfix">
+		                                <h2 class="right-text-d lead"><?php if ( get_field('carousel-title', get_the_ID()) != '') { the_field('carousel-title', get_the_ID()); } ?></h2>
+		                                <p class="bigger"><?php if ( get_field('carousel-text', get_the_ID()) !='') { the_field('carousel-text', get_the_ID()); } ?></p>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <a href="#" class="nav prev" id="singleportfolioprev"></a>
+		                    <a href="#" class="nav next" id="singleportfolionext"></a>
+		                    <div id="singleportfoliocarouselnav" class="carousel-pagination carousel-single-nav inverse"></div>
+		                </div>
+		            </div> <!-- .wrapper -->
+		        </div> <!-- .content-container -->
 				<?php the_content(); ?>
 			
 
