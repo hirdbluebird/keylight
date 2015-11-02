@@ -303,7 +303,7 @@ get_header(); ?>
 
 				<?php the_content(); ?>
 			
-				<?php comments_template(); ?>
+				<?php //comments_template(); ?>
 			<?php endwhile; ?>
 
 		</div><!-- #content -->
