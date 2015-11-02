@@ -94,11 +94,11 @@ get_header(); ?>
 		            </div>
 		        </div> <!-- .content-container -->
 
-		        <div id="quote" class="container-group" style="background-image: url(img/samples/background-2.jpg)">
+		        <div id="quote" class="container-group" style="background-image: url(<?php the_field('quotes-background'); ?>)">
 		            <div class="content-container">
 		                <div class="wrapper padding-large center-text">
-		                    <p class="quote center width70"><?php if ( get_field('quote_1', get_the_ID()) != '' ) { the_field('quote_1', get_the_ID()); } ?></p>
-		                    <a href="#pricing" class="scrollto btn color1"><?php if ( get_field('quote_1', get_the_ID()) != '' ) { the_field('quote_1', get_the_ID()); } ?></a>
+		                    <p class="quote center width70"><?php the_field('quotes-text', get_the_ID()) ?></p>
+		                    <a href="#pricing" class="scrollto btn color1"><?php the_field('quotes-button', get_the_ID()) ?></a>
 		                </div> <!-- .wrapper -->
 		            </div> <!-- .content-container -->
 		            <?php echo var_dump( get_field('quote_1', get_the_ID())); ?>
@@ -221,24 +221,24 @@ get_header(); ?>
 		                <div class="container">
 		                    <div id="singleportfoliocarousel" class="carousel-single">
 		                        <div class="box">
-		                            <div class="img"><img src="<?php if ( get_field('carousel-image', get_the_ID()) != '') { the_field('carousel-image', get_the_ID()); } ?>" alt=""></div>
+		                            <div class="img"><img src="<?php if ( get_sub_field('carousel-image', get_the_ID()) != '') { the_sub_field('carousel-image', get_the_ID()); } ?>" alt=""></div>
 		                            <div class="inner clearfix">
-		                                <h2 class="right-text-d lead"><?php if ( get_field('carousel-title', get_the_ID()) != '') { the_field('carousel-title', get_the_ID()); } ?></h2>
-		                                <p class="bigger"><?php if ( get_field('carousel-text', get_the_ID()) !='') { the_field('carousel-text', get_the_ID()); } ?></p>
+		                                <h2 class="right-text-d lead"><?php if ( get_sub_field('carousel-title', get_the_ID()) != '') { the_sub_field('carousel-title', get_the_ID()); } ?></h2>
+		                                <p class="bigger"><?php if ( get_sub_field('carousel-text', get_the_ID()) !='') { the_sub_field('carousel-text', get_the_ID()); } ?></p>
 		                            </div>
 		                        </div>
 		                        <div class="box">
-		                            <div class="img"><img src="<?php if ( get_field('carousel-image', get_the_ID()) != '') { the_field('carousel-image', get_the_ID()); } ?>" alt=""></div>
+		                            <div class="img"><img src="<?php if ( get_sub_field('carousel-image', get_the_ID()) != '') { the_sub_field('carousel-image', get_the_ID()); } ?>" alt=""></div>
 		                            <div class="inner clearfix">
-		                                <h2 class="right-text-d lead"><?php if ( get_field('carousel-title', get_the_ID()) != '') { the_field('carousel-title', get_the_ID()); } ?></h2>
-		                                <p class="bigger"><?php if ( get_field('carousel-text', get_the_ID()) !='') { the_field('carousel-text', get_the_ID()); } ?></p>
+		                                <h2 class="right-text-d lead"><?php if ( get_sub_field('carousel-title', get_the_ID()) != '') { the_sub_field('carousel-title', get_the_ID()); } ?></h2>
+		                                <p class="bigger"><?php if ( get_sub_field('carousel-text', get_the_ID()) !='') { the_sub_field('carousel-text', get_the_ID()); } ?></p>
 		                            </div>
 		                        </div>
 		                        <div class="box">
-		                            <div class="img"><img src="<?php if ( get_field('carousel-image', get_the_ID()) != '') { the_field('carousel-image', get_the_ID()); } ?>" alt=""></div>
+		                            <div class="img"><img src="<?php if ( get_sub_field('carousel-image', get_the_ID()) != '') { the_sub_field('carousel-image', get_the_ID()); } ?>" alt=""></div>
 		                            <div class="inner clearfix">
-		                                <h2 class="right-text-d lead"><?php if ( get_field('carousel-title', get_the_ID()) != '') { the_field('carousel-title', get_the_ID()); } ?></h2>
-		                                <p class="bigger"><?php if ( get_field('carousel-text', get_the_ID()) !='') { the_field('carousel-text', get_the_ID()); } ?></p>
+		                                <h2 class="right-text-d lead"><?php if ( get_sub_field('carousel-title', get_the_ID()) != '') { the_sub_field('carousel-title', get_the_ID()); } ?></h2>
+		                                <p class="bigger"><?php if ( get_sub_field('carousel-text', get_the_ID()) !='') { the_sub_field('carousel-text', get_the_ID()); } ?></p>
 		                            </div>
 		                        </div>
 		                    </div>
