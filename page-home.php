@@ -248,9 +248,61 @@ get_header(); ?>
 		                </div>
 		            </div> <!-- .wrapper -->
 		        </div> <!-- .content-container -->
+
+		        <div id="pricing" class="section container-group" style="background-image: url(img/samples/background-3.jpg)">
+		            <div class="content-container color2">
+		                <div class="wrapper padding-large center-text">
+		                    <div class="row">
+		                        <div class="third">
+		                            <div class="pricingbox">
+		                                <span class="name">Basic</span>
+		                                <p class="price color1">Free</p>
+		                                <ul>
+		                                    <li>Free ice cream</li>
+		                                    <li>3.5 hour support</li>
+		                                    <li>Free consultation</li>
+		                                    <li>20GB of online storage</li>
+		                                    <li>a lot more...</li>
+		                                </ul>
+		                                <a href="#" class="btn color1">Sign up</a>
+		                            </div>
+		                        </div>
+		                        <div class="third">
+		                            <div class="pricingbox">
+		                                <span class="name">Standart</span>
+		                                <p class="price color2">$19,99</p>
+		                                <ul>
+		                                    <li>Free ice cream</li>
+		                                    <li>3.5 hour support</li>
+		                                    <li>Free consultation</li>
+		                                    <li>20GB of online storage</li>
+		                                    <li>a lot more...</li>
+		                                </ul>
+		                                <a href="#" class="btn color1">Sign up</a>
+		                            </div>
+		                        </div>
+		                        <div class="third">
+		                            <div class="pricingbox">
+		                                <span class="name">Advanced</span>
+		                                <p class="price color2">$39.99</p>
+		                                <ul>
+		                                    <li>Free ice cream</li>
+		                                    <li>3.5 hour support</li>
+		                                    <li>Free consultation</li>
+		                                    <li>20GB of online storage</li>
+		                                    <li>a lot more...</li>
+		                                </ul>
+		                                <a href="#" class="btn color1">Sign up</a>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <p class="bigger width70 center">We also offer customized pricing for enterprises. Please <a href="#contact" class="scrollto">contact us</a> and we’ll prepare you an offer.</p>
+		                </div> <!-- .wrapper -->
+		            </div> <!-- .content-container -->      
+		        </div>
+
 				<?php the_content(); ?>
 			
-
 				<?php comments_template(); ?>
 			<?php endwhile; ?>
 
