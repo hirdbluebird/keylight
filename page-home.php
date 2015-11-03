@@ -62,39 +62,40 @@ get_header(); ?>
 
 		        <div id="work" class="section content-container white">
 		            <div class="wrapper">
-		                <h2 class="title center-text padding-small"><?php if ( get_field('work_title', get_the_ID()) != '' ) { the_field('work_title', get_the_ID()); } ?></h2>
+		                <h2 class="title center-text padding-small"><?php if ( get_field('work-title', get_the_ID()) != '' ) { the_field('work-title', get_the_ID()); } ?></h2>
 		            </div> <!-- .wrapper -->
 		            <div class="gallerycont">
 		                <!-- <div id="gallerynav" class="carousel-pagination gallery-nav inverse"></div> -->
 		                <div class="gallery clearfix">
-		                  <div data-id="id-11" class="item print"><a href="<?php if ( get_field('work_image', get_the_ID()) != '' ) { the_field('work_image', get_the_ID()); } ?>" data-lightbox-gallery="gallery1" data-title="<?php if ( get_field('work_item_title', get_the_ID()) != '' ) { the_field('work_item_title', get_the_ID()); } ?>" data-caption="<?php if ( get_field('work_item_description', get_the_ID()) != '' ) { the_field('work_item_description', get_the_ID()); } ?>"><img src="<?php if ( get_field('work_thumbnail', get_the_ID()) != '' ) { the_field('work_thumbnail', get_the_ID()); } ?>"></a></div>
+  		                    <div data-id="id-11" class="item print"><a href="img/samples/portfolio/big/1.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="http://clients.netweightit.com/keylight/wp-content/uploads/2015/10/images-1.jpg"></a></div>
 
-		                  <div data-id="id-7" class="item web"><a href="<?php if ( get_field('work_image', get_the_ID()) != '' ) { the_field('work_image', get_the_ID()); } ?>" data-lightbox-gallery="gallery1" data-title="<?php if ( get_field('work_item_title', get_the_ID()) != '' ) { the_field('work_item_title', get_the_ID()); } ?>" data-caption="<?php if ( get_field('work_item_description', get_the_ID()) != '' ) { the_field('work_item_description', get_the_ID()); } ?>"><img src="<?php if ( get_field('work_thumbnail', get_the_ID()) != '' ) { the_field('work_thumbnail', get_the_ID()); } ?>"></a></div>
+			                <div data-id="id-7" class="item web"><a href="img/samples/portfolio/big/2.png" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="http://clients.netweightit.com/keylight/wp-content/uploads/2015/10/melt-480x360.jpg"></a></div>
 
-		                  <div data-id="id-8" class="item web"><a href="<?php if ( get_field('work_image', get_the_ID()) != '' ) { the_field('work_image', get_the_ID()); } ?>" data-lightbox-gallery="gallery1" data-title="<?php if ( get_field('work_item_title', get_the_ID()) != '' ) { the_field('work_item_title', get_the_ID()); } ?>" data-caption="<?php if ( get_field('work_item_description', get_the_ID()) != '' ) { the_field('work_item_description', get_the_ID()); } ?>"><img src="<?php if ( get_field('work_thumbnail', get_the_ID()) != '' ) { the_field('work_thumbnail', get_the_ID()); } ?>"></a></div>
+			                <div data-id="id-8" class="item web"><a href="img/samples/portfolio/big/3.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_field('work_thumbnails', get_the_ID()) != '' ) { the_field('work_thumbnails', get_the_ID()); } ?>"></a></div>
 
-		                  <div data-id="id-9" class="item print"><a href="<?php if ( get_field('work_image', get_the_ID()) != '' ) { the_field('work_image', get_the_ID()); } ?>" data-lightbox-gallery="gallery1" data-title="<?php if ( get_field('work_item_title', get_the_ID()) != '' ) { the_field('work_item_title', get_the_ID()); } ?>" data-caption="<?php if ( get_field('work_item_description', get_the_ID()) != '' ) { the_field('work_item_description', get_the_ID()); } ?>" data-options="width: 500" ><img src="<?php if ( get_field('work_thumbnail', get_the_ID()) != '' ) { the_field('work_thumbnail', get_the_ID()); } ?>"></a></div>
-		                  
-		                  <div data-id="id-6" class="item web"><a href="<?php if ( get_field('work_image', get_the_ID()) != '' ) { the_field('work_image', get_the_ID()); } ?>" data-lightbox-gallery="gallery1" data-title="<?php if ( get_field('work_item_title', get_the_ID()) != '' ) { the_field('work_item_title', get_the_ID()); } ?>" data-caption="<?php if ( get_field('work_item_description', get_the_ID()) != '' ) { the_field('work_item_description', get_the_ID()); } ?>"><img src="<?php if ( get_field('work_thumbnail', get_the_ID()) != '' ) { the_field('work_thumbnail', get_the_ID()); } ?>"></a></div>
+			                <div data-id="id-9" class="item print"><a href="img/samples/portfolio/big/4.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_field('work_thumbnails', get_the_ID()) != '' ) { the_field('work_thumbnails', get_the_ID()); } ?>"></a></div>
+			                
+			                <div data-id="id-6" class="item web"><a href="img/samples/portfolio/big/5.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_field('work_thumbnails', get_the_ID()) != '' ) { the_field('work_thumbnails', get_the_ID()); } ?>"></a></div>
 
-		                  <div data-id="id-13" class="item print"><a href="<?php if ( get_field('work_image', get_the_ID()) != '' ) { the_field('work_image', get_the_ID()); } ?>" data-lightbox-gallery="gallery1" data-title="<?php if ( get_field('work_item_title', get_the_ID()) != '' ) { the_field('work_item_title', get_the_ID()); } ?>" data-caption="<?php if ( get_field('work_item_description', get_the_ID()) != '' ) { the_field('work_item_description', get_the_ID()); } ?>"><img src="<?php if ( get_field('work_thumbnail', get_the_ID()) != '' ) { the_field('work_thumbnail', get_the_ID()); } ?>"></a></div>
+			                <div data-id="id-13" class="item print"><a href="img/samples/portfolio/big/7.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_field('work_thumbnails', get_the_ID()) != '' ) { the_field('work_thumbnails', get_the_ID()); } ?>"></a></div>
 
-		                  <div data-id="id-5" class="item web"><a href="<?php if ( get_field('work_image', get_the_ID()) != '' ) { the_field('work_image', get_the_ID()); } ?>" data-lightbox-gallery="gallery1" data-title="<?php if ( get_field('work_item_title', get_the_ID()) != '' ) { the_field('work_item_title', get_the_ID()); } ?>" data-caption="<?php if ( get_field('work_item_description', get_the_ID()) != '' ) { the_field('work_item_description', get_the_ID()); } ?>"><img src="<?php if ( get_field('work_thumbnail', get_the_ID()) != '' ) { the_field('work_thumbnail', get_the_ID()); } ?>"></a></div>
-		                  
-		                  <div data-id="id-10" class="item print"><a href="<?php if ( get_field('work_image', get_the_ID()) != '' ) { the_field('work_image', get_the_ID()); } ?>" data-lightbox-gallery="gallery1" data-title="<?php if ( get_field('work_item_title', get_the_ID()) != '' ) { the_field('work_item_title', get_the_ID()); } ?>" data-caption="<?php if ( get_field('work_item_description', get_the_ID()) != '' ) { the_field('work_item_description', get_the_ID()); } ?>"><img src="<?php if ( get_field('work_thumbnail', get_the_ID()) != '' ) { the_field('work_thumbnail', get_the_ID()); } ?>"></a></div>
-		                </div>
+			                <div data-id="id-5" class="item web"><a href="img/samples/portfolio/big/8.png" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_field('work_thumbnails', get_the_ID()) != '' ) { the_field('work_thumbnails', get_the_ID()); } ?>"></a></div>
+			                  
+			                <div data-id="id-10" class="item print"><a href="img/samples/portfolio/big/9.png" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_field('work_thumbnails', get_the_ID()) != '' ) { the_field('work_thumbnails', get_the_ID()); } ?>"></a></div>
+		                  </div>
 		                <a href="#" class="nav prev color2" id="portfolioprev">prev</a>
 		                <a href="#" class="nav next color2" id="portfolionext">next</a>
 		            </div>
 		            <div class="wrapper padding-tiny">
 		                <div class="center-text">
-		                    <p class="bigger width70 center mb40"><?php if ( get_field('work_text', get_the_ID()) != '' ) { the_field('work_text', get_the_ID()); } ?></p>
-		                        <a href="#contact" class="btn scrolltoslow mb50 color1"><?php if ( get_field('work_button', get_the_ID()) != '' ) { the_field('work_button', get_the_ID()); } ?></a>
+		                    <p class="bigger width70 center mb40"><?php if ( get_field('work-text', get_the_ID()) != '' ) { the_field('work-text', get_the_ID()); } ?></p>
+		                        <a href="#contact" class="btn scrolltoslow mb50 color1"><?php if ( get_field('work-button', get_the_ID()) != '' ) { the_field('work-button', get_the_ID()); } ?></a>
 		                </div>
 		            </div>
+		            <?php echo var_dump( the_sub_field('work-thumbnails', get_the_ID() ) ); ?>)
 		        </div> <!-- .content-container -->
 
-		        <div id="quote" class="container-group" style="background-image: url(<?php the_field('quotes-background'); ?>)">
+		        <div id="quote" class="container-group" style="background-image: url(<?php the_field('quotes-background', get_the_ID()) ?>)">
 		            <div class="content-container">
 		                <div class="wrapper padding-large center-text">
 		                    <p class="quote center width70"><?php the_field('quotes-text', get_the_ID()) ?></p>
@@ -136,13 +137,13 @@ get_header(); ?>
 		                <div class="row row-table">
 		                    <div class="half">
 		                        <div class="table-d center-text-mt">
-		                            <img src="img/icons/paperplane.png" alt="" class="table-cell-d mr-td-30">
+		                            <img src="<?php echo get_template_directory_uri(); ?>/img/icons/paperplane.png" alt="" class="table-cell-d mr-td-30">
 		                            <p class="bigger table-cell-d">I don't know a lot about everything, but I do know a lot about the part of everything that I know.<br><a href="#" class="btn mt20 small borderonly">Small button</a></p>
 		                        </div>
 		                    </div>
 		                    <div class="half">
 		                        <div class="table-d center-text-mt">
-		                            <img src="img/icons/moleskine.png" alt="" class="table-cell-d mr-td-30">
+		                            <img src="<?php echo get_template_directory_uri(); ?>/img/icons/moleskine.png" alt="" class="table-cell-d mr-td-30">
 		                            <p class="bigger table-cell-d">I don't know a lot about everything, but I do know a lot about the part of everything that I know.<br><a href="#" class="btn mt20 small borderonly">Small button</a></p>
 		                        </div>
 		                    </div>
@@ -162,9 +163,9 @@ get_header(); ?>
 		                            </a>
 		                            <h3><?php if ( get_field('employee-name', get_the_ID()) != '') { the_field('employee-name', get_the_ID()); } ?></h3>
 		                            <div class="social">
-		                                <a href="#" class="rotate"><img src="img/icons/picons/32/social-042_dribbble.png" alt=""></a>
-		                                <a href="#" class="rotate"><img src="img/icons/picons/32/social-043_twitter.png" alt=""></a>
-		                                <a href="#" class="rotate"><img src="img/icons/picons/32/social-046_facebook.png" alt=""></a>
+		                                <a href="#" class="rotate"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/32/social-042_dribbble.png" alt=""></a>
+		                                <a href="#" class="rotate"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/32/social-043_twitter.png" alt=""></a>
+		                                <a href="#" class="rotate"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/32/social-046_facebook.png" alt=""></a>
 		                            </div>
 		                            <p><?php if ( get_field('employee-comment', get_the_ID()) != '') { the_field('employee-comment', get_the_ID()); } ?></p>
 		                        </div>
@@ -177,9 +178,9 @@ get_header(); ?>
 		                            </a>
 		                            <h3><?php if ( get_field('employee-name', get_the_ID()) != '') { the_field('employee-name', get_the_ID()); } ?></h3>
 		                            <div class="social">
-		                                <a href="#" class="rotate"><img src="img/icons/picons/32/social-042_dribbble.png" alt=""></a>
-		                                <a href="#" class="rotate"><img src="img/icons/picons/32/social-043_twitter.png" alt=""></a>
-		                                <a href="#" class="rotate"><img src="img/icons/picons/32/social-046_facebook.png" alt=""></a>
+		                                <a href="#" class="rotate"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/32/social-042_dribbble.png" alt=""></a>
+		                                <a href="#" class="rotate"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/32/social-043_twitter.png" alt=""></a>
+		                                <a href="#" class="rotate"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/32/social-046_facebook.png" alt=""></a>
 		                            </div>
 		                            <p><?php if ( get_field('employee-comment', get_the_ID()) != '') { the_field('employee-comment', get_the_ID()); } ?></p>
 		                        </div>
@@ -192,9 +193,9 @@ get_header(); ?>
 		                            </a>
 		                            <h3><?php if ( get_field('employee-name', get_the_ID()) != '') { the_field('employee-name', get_the_ID()); } ?></h3>
 		                            <div class="social">
-		                                <a href="#" class="rotate"><img src="img/icons/picons/32/social-042_dribbble.png" alt=""></a>
-		                                <a href="#" class="rotate"><img src="img/icons/picons/32/social-043_twitter.png" alt=""></a>
-		                                <a href="#" class="rotate"><img src="img/icons/picons/32/social-046_facebook.png" alt=""></a>
+		                                <a href="#" class="rotate"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/32/social-042_dribbble.png" alt=""></a>
+		                                <a href="#" class="rotate"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/32/social-043_twitter.png" alt=""></a>
+		                                <a href="#" class="rotate"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/32/social-046_facebook.png" alt=""></a>
 		                            </div>
 		                            <p><?php if ( get_field('employee-comment', get_the_ID()) != '') { the_field('employee-comment', get_the_ID()); } ?></p>
 		                        </div>

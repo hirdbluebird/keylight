@@ -16,10 +16,10 @@
                         <p>I was made by <a href="#">Tardigrade Studio</a></p>
                     </div>
                     <div class="half table-cell right-text">
-                        <a href="#" class="inline-block fadeout20 rotate ml15 mb5 mt5"><img src="img/icons/picons/56/social-043_twitter.png" alt=""></a>
-                        <a href="#" class="inline-block fadeout20 rotate ml15 mb5 mt5"><img src="img/icons/picons/56/social-046_facebook.png" alt=""></a>
-                        <a href="#" class="inline-block fadeout20 rotate ml15 mb5 mt5"><img src="img/icons/picons/56/social-051_linkedin.png" alt=""></a>
-                        <a href="#" class="inline-block fadeout20 rotate ml15 mb5 mt5"><img src="img/icons/picons/56/social-042_dribbble.png" alt=""></a>
+                        <a href="#" class="inline-block fadeout20 rotate ml15 mb5 mt5"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/56/social-043_twitter.png" alt=""></a>
+                        <a href="#" class="inline-block fadeout20 rotate ml15 mb5 mt5"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/56/social-046_facebook.png" alt=""></a>
+                        <a href="#" class="inline-block fadeout20 rotate ml15 mb5 mt5"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/56/social-051_linkedin.png" alt=""></a>
+                        <a href="#" class="inline-block fadeout20 rotate ml15 mb5 mt5"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/56/social-042_dribbble.png" alt=""></a>
                     </div>
                 </div>
             </div>
