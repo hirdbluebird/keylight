@@ -67,21 +67,21 @@ get_header(); ?>
 		            <div class="gallerycont">
 		                <!-- <div id="gallerynav" class="carousel-pagination gallery-nav inverse"></div> -->
 		                <div class="gallery clearfix">
-  		                    <div data-id="id-11" class="item print"><a href="img/samples/portfolio/big/1.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="http://clients.netweightit.com/keylight/wp-content/uploads/2015/10/images-1.jpg"></a></div>
+  		                    <div data-id="id-11" class="item print"><a href="img/samples/portfolio/big/1.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src=""></a></div>
 
-			                <div data-id="id-7" class="item web"><a href="img/samples/portfolio/big/2.png" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="http://clients.netweightit.com/keylight/wp-content/uploads/2015/10/melt-480x360.jpg"></a></div>
+			                <div data-id="id-7" class="item web"><a href="img/samples/portfolio/big/2.png" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src=""></a></div>
 
-			                <div data-id="id-8" class="item web"><a href="img/samples/portfolio/big/3.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_field('work_thumbnails', get_the_ID()) != '' ) { the_field('work_thumbnails', get_the_ID()); } ?>"></a></div>
+			                <div data-id="id-8" class="item web"><a href="img/samples/portfolio/big/3.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src=""></a></div>
 
-			                <div data-id="id-9" class="item print"><a href="img/samples/portfolio/big/4.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_field('work_thumbnails', get_the_ID()) != '' ) { the_field('work_thumbnails', get_the_ID()); } ?>"></a></div>
+			                <div data-id="id-9" class="item print"><a href="img/samples/portfolio/big/4.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_sub_field('work-mini-1', get_the_ID()) != '' ) { the_sub_field('work-mini-1', get_the_ID()); } ?>"></a></div>
 			                
-			                <div data-id="id-6" class="item web"><a href="img/samples/portfolio/big/5.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_field('work_thumbnails', get_the_ID()) != '' ) { the_field('work_thumbnails', get_the_ID()); } ?>"></a></div>
+			                <div data-id="id-6" class="item web"><a href="img/samples/portfolio/big/5.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_sub_field('work-mini-2', get_the_ID()) != '' ) { the_sub_field('work-mini-2', get_the_ID()); } ?>"></a></div>
 
-			                <div data-id="id-13" class="item print"><a href="img/samples/portfolio/big/7.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_field('work_thumbnails', get_the_ID()) != '' ) { the_field('work_thumbnails', get_the_ID()); } ?>"></a></div>
+			                <div data-id="id-13" class="item print"><a href="img/samples/portfolio/big/7.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_sub_field('work-thumbnails', get_the_ID()) != '' ) { the_sub_field('work-thumbnails', get_the_ID()); } ?>"></a></div>
 
-			                <div data-id="id-5" class="item web"><a href="img/samples/portfolio/big/8.png" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_field('work_thumbnails', get_the_ID()) != '' ) { the_field('work_thumbnails', get_the_ID()); } ?>"></a></div>
+			                <div data-id="id-5" class="item web"><a href="img/samples/portfolio/big/8.png" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_sub_field('work-thumbnails', get_the_ID()) != '' ) { the_sub_field('work-thumbnails', get_the_ID()); } ?>"></a></div>
 			                  
-			                <div data-id="id-10" class="item print"><a href="img/samples/portfolio/big/9.png" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_field('work_thumbnails', get_the_ID()) != '' ) { the_field('work_thumbnails', get_the_ID()); } ?>"></a></div>
+			                <div data-id="id-10" class="item print"><a href="img/samples/portfolio/big/9.png" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_sub_field('work-thumbnails', get_the_ID()) != '' ) { the_sub_field('work-thumbnails', get_the_ID()); } ?>"></a></div>
 		                  </div>
 		                <a href="#" class="nav prev color2" id="portfolioprev">prev</a>
 		                <a href="#" class="nav next color2" id="portfolionext">next</a>
@@ -92,7 +92,6 @@ get_header(); ?>
 		                        <a href="#contact" class="btn scrolltoslow mb50 color1"><?php if ( get_field('work-button', get_the_ID()) != '' ) { the_field('work-button', get_the_ID()); } ?></a>
 		                </div>
 		            </div>
-		            <?php echo var_dump( the_sub_field('work-thumbnails', get_the_ID() ) ); ?>)
 		        </div> <!-- .content-container -->
 
 		        <div id="quote" class="container-group" style="background-image: url(<?php the_field('quotes-background', get_the_ID()) ?>)">
@@ -102,7 +101,7 @@ get_header(); ?>
 		                    <a href="#pricing" class="scrollto btn color1"><?php the_field('quotes-button', get_the_ID()) ?></a>
 		                </div> <!-- .wrapper -->
 		            </div> <!-- .content-container -->
-		            <?php echo var_dump( get_field('quote_1', get_the_ID())); ?>
+		   
 		            <div id="us" class="section content-container color2">
 		                <div class="wrapper padding">
 		                    <div id="tabs" class="tabs width70">
@@ -204,7 +203,7 @@ get_header(); ?>
 		            </div> <!-- .wrapper -->
 		        </div> <!-- .content-container -->
 
-		        <div id="quote2" class="container-group" style="background-image: url(img/samples/background-3.jpg)">
+		        <div id="quote2" class="container-group" style="background-image: url(<?php the_field('quotes-slider-background', get_the_ID()) ?>)">
 		            <div class="content-container">
 		                <div class="wrapper padding-large center-text">
 		                    <div id="quotecarousel" class="carousel-single">
@@ -250,7 +249,7 @@ get_header(); ?>
 		            </div> <!-- .wrapper -->
 		        </div> <!-- .content-container -->
 
-		        <div id="pricing" class="section container-group" style="background-image: url(img/samples/background-3.jpg)">
+		        <div id="pricing" class="section container-group" style="background-image: url(<?php if (get_field('prices-background', get_the_ID()) !='') { the_field('prices-background', get_the_ID()); } ?>)">
 		            <div class="content-container color2">
 		                <div class="wrapper padding-large center-text">
 		                    <div class="row">
@@ -302,13 +301,8 @@ get_header(); ?>
 		            </div> <!-- .content-container -->      
 		        </div>
 
+		        <div id="themap" class="map"></div>
 
-		        <div id="contact" class="footer section content-container color2 solid">
-		            <div class="wrapper padding-small">
-		                <h2 class="container title">I'm going to make him an offer he can't refuse.</h2>
-		                <?php if ( get_field('user-form', get_the_ID()) != '' ) { the_field('user-form', get_the_ID()); } ?>
-		            </div>
-		        </div>
 				<?php the_content(); ?>
 			
 				<?php //comments_template(); ?>
