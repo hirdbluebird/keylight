@@ -65,24 +65,21 @@ get_header(); ?>
 		                <h2 class="title center-text padding-small"><?php if ( get_field('work-title', get_the_ID()) != '' ) { the_field('work-title', get_the_ID()); } ?></h2>
 		            </div> <!-- .wrapper -->
 		            <div class="gallerycont">
+		            	
 		                <!-- <div id="gallerynav" class="carousel-pagination gallery-nav inverse"></div> -->
 		                <div class="gallery clearfix">
-  		                    <div data-id="id-11" class="item print"><a href="img/samples/portfolio/big/1.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src=""></a></div>
-
-			                <div data-id="id-7" class="item web"><a href="img/samples/portfolio/big/2.png" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src=""></a></div>
-
-			                <div data-id="id-8" class="item web"><a href="img/samples/portfolio/big/3.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src=""></a></div>
-
-			                <div data-id="id-9" class="item print"><a href="img/samples/portfolio/big/4.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_sub_field('work-mini-1', get_the_ID()) != '' ) { the_sub_field('work-mini-1', get_the_ID()); } ?>"></a></div>
-			                
-			                <div data-id="id-6" class="item web"><a href="img/samples/portfolio/big/5.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_sub_field('work-mini-2', get_the_ID()) != '' ) { the_sub_field('work-mini-2', get_the_ID()); } ?>"></a></div>
-
-			                <div data-id="id-13" class="item print"><a href="img/samples/portfolio/big/7.jpg" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_sub_field('work-thumbnails', get_the_ID()) != '' ) { the_sub_field('work-thumbnails', get_the_ID()); } ?>"></a></div>
-
-			                <div data-id="id-5" class="item web"><a href="img/samples/portfolio/big/8.png" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_sub_field('work-thumbnails', get_the_ID()) != '' ) { the_sub_field('work-thumbnails', get_the_ID()); } ?>"></a></div>
-			                  
-			                <div data-id="id-10" class="item print"><a href="img/samples/portfolio/big/9.png" data-lightbox-gallery="gallery1" data-title="Item title" data-caption="Item Description"><img src="<?php if ( get_sub_field('work-thumbnails', get_the_ID()) != '' ) { the_sub_field('work-thumbnails', get_the_ID()); } ?>"></a></div>
-		                  </div>
+		                	<?php if( have_rows('work-slider') ): ?>
+		                    <?php while( have_rows('work-slider') ): the_row(); ?>
+  		                    <div data-id="id-11" class="item print">
+  		                    	<a href="<?php if ( get_sub_field('work-full-image', get_the_ID())) { the_sub_field('work-full-image', get_the_ID()); } ?>" data-lightbox-gallery="gallery1" 
+  		                    	   data-title="<?php if ( get_sub_field('work-title', get_the_ID())) { the_sub_field('work-title', get_the_ID()); } ?>" 
+  		                    	   data-caption="<?php if ( get_sub_field('work-description', get_the_ID())) { the_sub_firld('work-description', get_the_ID()); } ?>">
+  		                    	<img src="<?php if (get_sub_field('work-thumbnails', get_the_ID())) { the_sub_field('work-thumbnails', get_the_ID()); } ?>">
+  		                    	</a>
+  		                    </div>
+  		                    <?php endwhile; ?>
+			            </div>
+			            <?php endif; ?>
 		                <a href="#" class="nav prev color2" id="portfolioprev">prev</a>
 		                <a href="#" class="nav next color2" id="portfolionext">next</a>
 		            </div>
