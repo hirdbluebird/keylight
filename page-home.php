@@ -31,7 +31,7 @@ get_header(); ?>
 		                        <div class="third">
 		                            <div class="center-text">
 		                                <div class="knobcontainer">
-		                                    <input type="text" id="projectsknob" value="<?php if ( get_field('number_project', get_the_ID()) != '' ) { the_field('number_project', get_the_ID()); } ?>" class="knob" data-readonly="true" data-width="290" data-height="290" data-min="0" data-max="54" data-skin="tron" data-thickness=".1" data-fgColor="#ffffff">
+		                                    <input type="text" id="projectsknob" value="54" class="knob" data-readonly="true" data-width="290" data-height="290" data-min="0" data-max="54" data-skin="tron" data-thickness=".1" data-fgColor="#ffffff">
 		                                    <span class="knobtitle">Projects</span>
 		                                </div>
 		                            </div>
@@ -39,7 +39,7 @@ get_header(); ?>
 		                        <div class="third">
 		                            <div class="center-text">
 		                                <div class="knobcontainer">
-		                                    <input type="text" id="clientsknob" value="<?php if ( get_field('number_clients', get_the_ID()) != '' ) { the_field('number_clients', get_the_ID()); } ?>" class="knob" data-readonly="true" data-width="290" data-height="290" data-min="0" data-max="34" data-skin="tron" data-thickness=".1" data-fgColor="#ffffff">
+		                                    <input type="text" id="clientsknob" value="34" class="knob" data-readonly="true" data-width="290" data-height="290" data-min="0" data-max="34" data-skin="tron" data-thickness=".1" data-fgColor="#ffffff">
 		                                    <span class="knobtitle">Clients</span>
 		                                </div>
 		                            </div>
@@ -47,7 +47,7 @@ get_header(); ?>
 		                        <div class="third">
 		                            <div class="center-text">
 		                                <div class="knobcontainer">
-		                                    <input type="text" id="hoursknob" value="<?php if ( get_field('number_hours', get_the_ID()) != '' ) { the_field('number_hours', get_the_ID()); } ?>" class="knob" data-readonly="true" data-width="290" data-height="290" data-min="0" data-max="465" data-skin="tron" data-thickness=".1" data-fgColor="#ffffff">
+		                                    <input type="text" id="hoursknob" value="465" class="knob" data-readonly="true" data-width="290" data-height="290" data-min="0" data-max="465" data-skin="tron" data-thickness=".1" data-fgColor="#ffffff">
 		                                    <span class="knobtitle">Hours</span>
 		                                </div>
 		                            </div>
@@ -71,8 +71,8 @@ get_header(); ?>
 		                	<?php if( have_rows('work-slider') ): ?>
 		                    <?php while( have_rows('work-slider') ): the_row(); ?>
   		                    <div data-id="<?php the_sub_field('work-item-id'); ?>" class="item print">
-  		                    	<a         href="<?php the_sub_field('work-full-image'); ?>" data-lightbox-gallery="gallery1" 
-  		                    	     data-title="<?php the_sub_field('work-title'); ?>" 
+  		                    	<a href="<?php the_sub_field('work-full-image'); ?>" data-lightbox-gallery="gallery1" 
+  		                    	   data-title="<?php the_sub_field('work-name'); ?>" 
   		                    	   data-caption="<?php the_sub_field('work-description'); ?>">
   		                    	<img src="<?php the_sub_field('work-thumbnails'); ?>">
   		                    	<?php ?>
