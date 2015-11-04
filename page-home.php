@@ -68,18 +68,16 @@ get_header(); ?>
 		            	
 		                <!-- <div id="gallerynav" class="carousel-pagination gallery-nav inverse"></div> -->
 		                <div class="gallery clearfix">
-		                	<?php if( have_rows('work-slider') ): ?>
 		                    <?php while( have_rows('work-slider') ): the_row(); ?>
-  		                    <div data-id="id-11" class="item print">
-  		                    	<a href="<?php if ( get_sub_field('work-full-image', get_the_ID())) { the_sub_field('work-full-image', get_the_ID()); } ?>" data-lightbox-gallery="gallery1" 
-  		                    	   data-title="<?php if ( get_sub_field('work-title', get_the_ID())) { the_sub_field('work-title', get_the_ID()); } ?>" 
-  		                    	   data-caption="<?php if ( get_sub_field('work-description', get_the_ID())) { the_sub_firld('work-description', get_the_ID()); } ?>">
-  		                    	<img src="<?php if (get_sub_field('work-thumbnails', get_the_ID())) { the_sub_field('work-thumbnails', get_the_ID()); } ?>">
+  		                    <div data-id="id-<?php if ( get_sub_field('work-item-id', get_the_ID() != '')) { the_sub_field('work-item-id', get_the_ID()); } ?>" class="item print">
+  		                    	<a         href="<?php if ( get_sub_field('work-full-image', get_the_ID()) != '') { the_sub_field('work-full-image', get_the_ID()); } ?>" data-lightbox-gallery="gallery1" 
+  		                    	     data-title="<?php if ( get_sub_field('work-title', get_the_ID()) != '') { the_sub_field('work-title', get_the_ID()); } ?>" 
+  		                    	   data-caption="<?php if ( get_sub_field('work-description', get_the_ID()) !='') { the_sub_firld('work-description', get_the_ID()); } ?>">
+  		                    	<img src="<?php if (get_sub_field('work-thumbnails', get_the_ID()) !='') { the_sub_field('work-thumbnails', get_the_ID()); } ?>">
   		                    	</a>
   		                    </div>
   		                    <?php endwhile; ?>
 			            </div>
-			            <?php endif; ?>
 		                <a href="#" class="nav prev color2" id="portfolioprev">prev</a>
 		                <a href="#" class="nav next color2" id="portfolionext">next</a>
 		            </div>
