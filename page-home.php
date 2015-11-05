@@ -217,53 +217,75 @@ get_header(); ?>
 		            <div class="content-container color2">
 		                <div class="wrapper padding-large center-text">
 		                    <div class="row">
+		                    	<?php if (have_rows('prices-block')): ?>
+		                    	<?php while (have_rows('prices-block')): the_row(); ?>
 		                        <div class="third">
 		                            <div class="pricingbox">
-		                                <span class="name">Basic</span>
-		                                <p class="price color1">Free</p>
+		                                <span class="name"><?php the_sub_field('tarif-name'); ?></span>
+		                                <p class="price color1"><?php the_sub_field('dollar-price'); ?></p>
 		                                <ul>
-		                                    <li>Free ice cream</li>
-		                                    <li>3.5 hour support</li>
-		                                    <li>Free consultation</li>
-		                                    <li>20GB of online storage</li>
-		                                    <li>a lot more...</li>
+		                                	<?php if (have_rows('includes')): ?>
+		                    				<?php while (have_rows('includes')): the_row(); ?>
+		                                    <li><?php the_sub_field('tariff-includes') ?></li>
+											<?php endwhile; ?>
+											<?php endif; ?>
 		                                </ul>
-		                                <a href="#" class="btn color1">Sign up</a>
+		                                <a href="#" class="btn color1"><?php the_sub_field('signup-button') ?></a>
 		                            </div>
 		                        </div>
-		                        <div class="third">
-		                            <div class="pricingbox">
-		                                <span class="name">Standart</span>
-		                                <p class="price color2">$19,99</p>
-		                                <ul>
-		                                    <li>Free ice cream</li>
-		                                    <li>3.5 hour support</li>
-		                                    <li>Free consultation</li>
-		                                    <li>20GB of online storage</li>
-		                                    <li>a lot more...</li>
-		                                </ul>
-		                                <a href="#" class="btn color1">Sign up</a>
-		                            </div>
-		                        </div>
-		                        <div class="third">
-		                            <div class="pricingbox">
-		                                <span class="name">Advanced</span>
-		                                <p class="price color2">$39.99</p>
-		                                <ul>
-		                                    <li>Free ice cream</li>
-		                                    <li>3.5 hour support</li>
-		                                    <li>Free consultation</li>
-		                                    <li>20GB of online storage</li>
-		                                    <li>a lot more...</li>
-		                                </ul>
-		                                <a href="#" class="btn color1">Sign up</a>
-		                            </div>
-		                        </div>
+		                        <?php endwhile; ?>
+								<?php endif; ?>	
 		                    </div>
 		                    <p class="bigger width70 center">We also offer customized pricing for enterprises. Please <a href="#contact" class="scrollto">contact us</a> and we’ll prepare you an offer.</p>
 		                </div> <!-- .wrapper -->
 		            </div> <!-- .content-container -->      
 		        </div>
+
+
+		        <div id="blog" class="section content-container grey relative narrow-carousel">
+		            <div class="wrapper padding-small">
+		                <h2 class="center-text title"><?php the_sub_field('blog-main-title') ?></h2>
+
+		                <?php if (have_rows('prices-block')): ?>
+                    	<?php while (have_rows('prices-block')): the_row(); ?>
+		                <div class="row">
+		                    <div class="half">
+		                        <div class="blogitem">
+		                            <header><h3><a href="blog-single.html"><?php the_sub_field('blog-title') ?></a></h3>
+		                                <div class="comments"><?php the_sub_field('blog-comments-count') ?></div>
+		                                <div class="meta">
+		                                    <a href="#"><?php the_sub_field('blog-data') ?></a>
+		                                    in <a href="#">Design</a>
+		                                </div>
+		                            </header>
+		                            <div class="entry">
+		                                <p><?php the_sub_field('blog-text') ?></p>
+		                            </div>
+		                            <a href="blog-single.html" class="btn color1 small"><?php the_sub_field('blog-read-on') ?></a>
+		                        </div>
+		                    </div>
+		                    <div class="half">
+		                        <div class="blogitem">
+		                            <header><h3><a href="blog-single.html"><?php the_sub_field('blog-title') ?></a></h3>
+		                                <div class="comments"><?php the_sub_field('blog-comments-count') ?></div>
+		                                <div class="meta">
+		                                    <a href="#"><?php the_sub_field('blog-data') ?></a>
+		                                    in <a href="#">Design</a>
+		                                </div>
+		                            </header>
+		                            <div class="entry">
+		                                <p><?php the_sub_field('blog-text') ?></p>
+		                            </div>
+		                            <a href="blog-single.html" class="btn color1 small"><?php the_sub_field('blog-read-on') ?></a>
+		                        </div>
+		                    </div>
+		                </div>
+		                <?php endwhile; ?>
+						<?php endif; ?>
+		                
+		            </div> <!-- .wrapper -->
+		        </div> <!-- .content-container -->
+
 
 		        <div id="themap" class="map"></div>
 
