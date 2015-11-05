@@ -194,27 +194,17 @@ get_header(); ?>
 		            <div class="wrapper padding center-text">
 		                <div class="container">
 		                    <div id="singleportfoliocarousel" class="carousel-single">
+		                    	<?php if (have_rows('carousel')): ?>
+		                    	<?php while (have_rows('carousel')): the_row(); ?>
 		                        <div class="box">
-		                            <div class="img"><img src="<?php if ( get_sub_field('carousel-image', get_the_ID()) != '') { the_sub_field('carousel-image', get_the_ID()); } ?>" alt=""></div>
+		                            <div class="img"><img src="<?php the_sub_field('carousel-image') ?>" alt=""></div>
 		                            <div class="inner clearfix">
-		                                <h2 class="right-text-d lead"><?php if ( get_sub_field('carousel-title', get_the_ID()) != '') { the_sub_field('carousel-title', get_the_ID()); } ?></h2>
-		                                <p class="bigger"><?php if ( get_sub_field('carousel-text', get_the_ID()) !='') { the_sub_field('carousel-text', get_the_ID()); } ?></p>
+		                                <h2 class="right-text-d lead"><?php the_sub_field('carousel-title') ?></h2>
+		                                <p class="bigger"><?php the_sub_field('carousel-text') ?></p>
 		                            </div>
 		                        </div>
-		                        <div class="box">
-		                            <div class="img"><img src="<?php if ( get_sub_field('carousel-image', get_the_ID()) != '') { the_sub_field('carousel-image', get_the_ID()); } ?>" alt=""></div>
-		                            <div class="inner clearfix">
-		                                <h2 class="right-text-d lead"><?php if ( get_sub_field('carousel-title', get_the_ID()) != '') { the_sub_field('carousel-title', get_the_ID()); } ?></h2>
-		                                <p class="bigger"><?php if ( get_sub_field('carousel-text', get_the_ID()) !='') { the_sub_field('carousel-text', get_the_ID()); } ?></p>
-		                            </div>
-		                        </div>
-		                        <div class="box">
-		                            <div class="img"><img src="<?php if ( get_sub_field('carousel-image', get_the_ID()) != '') { the_sub_field('carousel-image', get_the_ID()); } ?>" alt=""></div>
-		                            <div class="inner clearfix">
-		                                <h2 class="right-text-d lead"><?php if ( get_sub_field('carousel-title', get_the_ID()) != '') { the_sub_field('carousel-title', get_the_ID()); } ?></h2>
-		                                <p class="bigger"><?php if ( get_sub_field('carousel-text', get_the_ID()) !='') { the_sub_field('carousel-text', get_the_ID()); } ?></p>
-		                            </div>
-		                        </div>
+		                        <?php endwhile; ?>
+		                     	<?php endif; ?>
 		                    </div>
 		                    <a href="#" class="nav prev" id="singleportfolioprev"></a>
 		                    <a href="#" class="nav next" id="singleportfolionext"></a>
