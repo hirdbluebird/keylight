@@ -118,7 +118,7 @@ get_header(); ?>
 		                            <?php if ( have_rows('togglable-tabs')) : ?>
 		                    		<?php while ( have_rows('togglable-tabs')) : the_row(); ?>
 		                            <div id="tabs-<?php the_sub_field('quote-tab-id'); ?>">
-		                                    <p class="bigger"><?php the_sub_field('quote-tab-text') ?></p><p><?php if ( get_sub_field('quote-tab-subtext') !='' ) { the_sub_field('quote-tab-subtext'); }  ?></p>
+		                                    <p class="bigger"><?php the_sub_field('quote-tab-text') ?></p><p><?php the_sub_field('quote-tab-subtext'); ?></p>
 		                            </div>
 		                            <?php endwhile; ?>
 		                      		<?php endif; ?>
@@ -152,51 +152,25 @@ get_header(); ?>
 		            <div class="wrapper padding-small">
 		                <h2 class="title center-text"><?php if ( get_field('employee-title', get_the_ID()) != '') { the_field('employee-title', get_the_ID()); } ?></h2>
 		                <div class="row">
+		                	<?php if ( have_rows('employee-block')): ?>
+		                	<?php while ( have_rows('employee-block')) : the_row(); ?>
 		                    <div class="third">
 		                        <div class="about">
 		                            <a class="circle">
-		                                <span class="overlay"><span class="inner"><span class="text"><?php if ( get_field('employee-position', get_the_ID()) != '') { the_field('employee-position', get_the_ID()); } ?></span></span></span>
-		                                <img src="<?php if ( get_field('employee-image', get_the_ID()) != '') { the_field('employee-image', get_the_ID()); } ?>">
+		                                <span class="overlay"><span class="inner"><span class="text"><?php the_sub_field('employee-position'); ?></span></span></span>
+		                                <img src="<?php the_sub_field('employee-image') ?>">
 		                            </a>
-		                            <h3><?php if ( get_field('employee-name', get_the_ID()) != '') { the_field('employee-name', get_the_ID()); } ?></h3>
+		                            <h3><?php the_sub_field('employee-name'); ?></h3>
 		                            <div class="social">
 		                                <a href="#" class="rotate"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/32/social-042_dribbble.png" alt=""></a>
 		                                <a href="#" class="rotate"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/32/social-043_twitter.png" alt=""></a>
 		                                <a href="#" class="rotate"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/32/social-046_facebook.png" alt=""></a>
 		                            </div>
-		                            <p><?php if ( get_field('employee-comment', get_the_ID()) != '') { the_field('employee-comment', get_the_ID()); } ?></p>
+		                            <p><?php the_sub_field('employee-comment'); ?></p>
 		                        </div>
 		                    </div>
-		                    <div class="third">
-		                        <div class="about">
-		                            <a class="circle">
-		                                <span class="overlay"><span class="inner"><span class="text"><?php if ( get_field('employee-position', get_the_ID()) != '') { the_field('employee-position', get_the_ID()); } ?></span></span></span>
-		                                <img src="<?php if ( get_field('employee-image', get_the_ID()) != '') { the_field('employee-image', get_the_ID()); } ?>">
-		                            </a>
-		                            <h3><?php if ( get_field('employee-name', get_the_ID()) != '') { the_field('employee-name', get_the_ID()); } ?></h3>
-		                            <div class="social">
-		                                <a href="#" class="rotate"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/32/social-042_dribbble.png" alt=""></a>
-		                                <a href="#" class="rotate"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/32/social-043_twitter.png" alt=""></a>
-		                                <a href="#" class="rotate"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/32/social-046_facebook.png" alt=""></a>
-		                            </div>
-		                            <p><?php if ( get_field('employee-comment', get_the_ID()) != '') { the_field('employee-comment', get_the_ID()); } ?></p>
-		                        </div>
-		                    </div>
-		                    <div class="third">
-		                        <div class="about">
-		                            <a class="circle">
-		                                <span class="overlay"><span class="inner"><span class="text"><?php if ( get_field('employee-position', get_the_ID()) != '') { the_field('employee-position', get_the_ID()); } ?></span></span></span>
-		                                <img src="<?php if ( get_field('employee-image', get_the_ID()) != '') { the_field('employee-image', get_the_ID()); } ?>">
-		                            </a>
-		                            <h3><?php if ( get_field('employee-name', get_the_ID()) != '') { the_field('employee-name', get_the_ID()); } ?></h3>
-		                            <div class="social">
-		                                <a href="#" class="rotate"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/32/social-042_dribbble.png" alt=""></a>
-		                                <a href="#" class="rotate"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/32/social-043_twitter.png" alt=""></a>
-		                                <a href="#" class="rotate"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/picons/32/social-046_facebook.png" alt=""></a>
-		                            </div>
-		                            <p><?php if ( get_field('employee-comment', get_the_ID()) != '') { the_field('employee-comment', get_the_ID()); } ?></p>
-		                        </div>
-		                    </div>
+		                    <?php endwhile; ?>
+		                	<?php endif; ?>
 		                </div>
 		            </div> <!-- .wrapper -->
 		        </div> <!-- .content-container -->
@@ -205,9 +179,11 @@ get_header(); ?>
 		            <div class="content-container">
 		                <div class="wrapper padding-large center-text">
 		                    <div id="quotecarousel" class="carousel-single">
-		                        <div><p class="quote center width70"><?php if ( get_field('quotes-text', get_the_ID()) != '') { the_field('quotes-text', get_the_ID()); } ?></p></div>
-		                        <div><p class="quote center width70"><?php if ( get_field('quotes-text', get_the_ID()) != '') { the_field('quotes-text', get_the_ID()); } ?></p></div>
-		                        <div><p class="quote center width70"><?php if ( get_field('quotes-text', get_the_ID()) != '') { the_field('quotes-text', get_the_ID()); } ?></p></div>
+		                    	<?php if (have_rows('quotes-slider')): ?>
+		                    	<?php while (have_rows('quotes-slider')): the_row(); ?>
+		                        <div><p class="quote center width70"><?php the_sub_field('quotes-slider-text') ?></p></div>
+		                     	<?php endwhile; ?>
+		                     	<?php endif; ?>
 		                    </div>
 		                    <div id="quotecarouselnav" class="carousel-pagination carousel-single-nav"></div>
 		                </div> <!-- .wrapper -->
