@@ -3,7 +3,6 @@
  * Template Name: Keylight
  * Description: Keylight theme without sidebar
  */
-
 get_header(); ?>
 
 	<div id="primary" class="content-area">
@@ -53,8 +52,8 @@ get_header(); ?>
 		                            </div>
 		                        </div>
 		                    </div>
-		                    <p class="bigger width70 center mb40"><?php if ( get_field('benefits_text', get_the_ID()) != '' ) { the_field('benefits_text', get_the_ID()); } ?></p>
-		                    <a href="#work" class="scrollto btn borderonly"><?php if ( get_field('benefits_button', get_the_ID()) != '' ) { the_field('benefits_button', get_the_ID()); } ?></a>
+		                    <p class="bigger width70 center mb40"><?php if ( get_field('knob-text', get_the_ID()) != '' ) { the_field('knob-text', get_the_ID()); } ?></p>
+		                    <a href="#work" class="scrollto btn borderonly"><?php if ( get_field('knob-button', get_the_ID()) != '' ) { the_field('knob-button', get_the_ID()); } ?></a>
 		                </div>
 		            </div> <!-- .content-container -->
 		        </div>
@@ -103,27 +102,27 @@ get_header(); ?>
 		   
 		            <div id="us" class="section content-container color2">
 		                <div class="wrapper padding">
+
 		                    <div id="tabs" class="tabs width70">
 		                        <ul>
-		                            <li><a href="#tabs-1" title=""><?php if ( get_field('tab-1', get_the_ID()) != '' ) { the_field('tab-1', get_the_ID()); } ?></a></li>
-		                            <li><a href="#tabs-2" title=""><?php if ( get_field('tab-2', get_the_ID()) != '' ) { the_field('tab-2', get_the_ID()); } ?></a></li>
-		                            <li><a href="#tabs-3" title=""><?php if ( get_field('tab-3', get_the_ID()) != '' ) { the_field('tab-3', get_the_ID()); } ?></a></li>
+		                        	<?php if ( have_rows('togglable-tabs')) : ?>
+		                    		<?php while ( have_rows('togglable-tabs')) : the_row(); ?>
+
+		                            <li><a href="#tabs-<?php the_sub_field('quote-tab-id'); ?>" title=""><?php the_sub_field('quote-tab'); ?></a></li>
+		                      		
+		                      		<?php endwhile; ?>
+		                      		<?php endif; ?>
 		                        </ul>
 
 		                        <div id="tabs_container" class="clearfix">
-		                            <div id="tabs-1">
-		                                    <p class="bigger"><?php if ( get_field('tab-1-text', get_the_ID()) != '' ) { the_field('tab-1-text', get_the_ID()); } ?></p>
-		                                    <hr class="width30 center">
-		                                    <p class="bigger"><a href="#" class="dashed bold"></a></p>
+		                            <?php if ( have_rows('togglable-tabs')) : ?>
+		                    		<?php while ( have_rows('togglable-tabs')) : the_row(); ?>
+		                            <div id="tabs-<?php the_sub_field('quote-tab-id'); ?>">
+		                                    <p class="bigger"><?php the_sub_field('quote-tab-text') ?></p><p><?php if ( get_sub_field('quote-tab-subtext') !='' ) { the_sub_field('quote-tab-subtext'); }  ?></p>
 		                            </div>
-		                            <div id="tabs-2">
-		                                    <p class="bigger"><?php if ( get_field('tab-2-text', get_the_ID()) != '' ) { the_field('tab-2-text', get_the_ID()); } ?></p>
-		                        
-		                            </div>
-		                            <div id="tabs-3">
-		                                    <p class="bigger"><?php if ( get_field('tab-3-text', get_the_ID()) != '' ) { the_field('tab-3-text', get_the_ID()); } ?></p><p><?php if ( get_field('tab-3-subtext', get_the_ID()) != '' ) { the_field('tab-3-subtext', get_the_ID()); } ?></p>
-		                            </div>
-		                        </div><!--End tabs container-->
+		                            <?php endwhile; ?>
+		                      		<?php endif; ?>
+		                        </div>
 		                    </div><!--End tabs-->
 
 		                </div> <!-- .wrapper -->
