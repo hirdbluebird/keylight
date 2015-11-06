@@ -246,24 +246,9 @@ get_header(); ?>
 		            <div class="wrapper padding-small">
 		                <h2 class="center-text title"><?php the_sub_field('blog-main-title') ?></h2>
 
-		                <?php if (have_rows('prices-block')): ?>
-                    	<?php while (have_rows('prices-block')): the_row(); ?>
+		                <?php if (have_rows('blog-block')): ?>
+                    	<?php while (have_rows('blog-block')): the_row(); ?>
 		                <div class="row">
-		                    <div class="half">
-		                        <div class="blogitem">
-		                            <header><h3><a href="blog-single.html"><?php the_sub_field('blog-title') ?></a></h3>
-		                                <div class="comments"><?php the_sub_field('blog-comments-count') ?></div>
-		                                <div class="meta">
-		                                    <a href="#"><?php the_sub_field('blog-data') ?></a>
-		                                    in <a href="#">Design</a>
-		                                </div>
-		                            </header>
-		                            <div class="entry">
-		                                <p><?php the_sub_field('blog-text') ?></p>
-		                            </div>
-		                            <a href="blog-single.html" class="btn color1 small"><?php the_sub_field('blog-read-on') ?></a>
-		                        </div>
-		                    </div>
 		                    <div class="half">
 		                        <div class="blogitem">
 		                            <header><h3><a href="blog-single.html"><?php the_sub_field('blog-title') ?></a></h3>
