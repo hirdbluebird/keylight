@@ -244,30 +244,33 @@ get_header(); ?>
 
 		        <div id="blog" class="section content-container grey relative narrow-carousel">
 		            <div class="wrapper padding-small">
-		                <h2 class="center-text title"><?php the_sub_field('blog-main-title') ?></h2>
+		                <h2 class="center-text title">Latest from the blog</h2>
 
-		                <?php if (have_rows('blog-block')): ?>
-                    	<?php while (have_rows('blog-block')): the_row(); ?>
+		                
 		                <div class="row">
+
+	                	<?php 
+	                	$args = array( 'numberposts' => '4' ); 
+	                	$recent_posts = wp_get_recent_posts( $args );
+	           			foreach ($recent_posts as $recent) {
+	                	?>
 		                    <div class="half">
 		                        <div class="blogitem">
-		                            <header><h3><a href="blog-single.html"><?php the_sub_field('blog-title') ?></a></h3>
-		                                <div class="comments"><?php the_sub_field('blog-comments-count') ?></div>
+		                            <header><h3><a href="blog-single.html"><?php echo $recent["post_title"]; ?></a></h3>
+		                                <div class="comments"><?php echo $recent["comment_count"]; ?></div>
 		                                <div class="meta">
-		                                    <a href="#"><?php the_sub_field('blog-data') ?></a>
-		                                    in <a href="#">Design</a>
+		                                    <a href="#"><?php echo $recent["post_date"]; ?></a>
+		                                    in <a href="#"><?php echo $recent["post_mime_type"]; ?></a>
 		                                </div>
 		                            </header>
 		                            <div class="entry">
-		                                <p><?php the_sub_field('blog-text') ?></p>
+		                                <p><?php echo $recent["post_content"]; ?></p>
 		                            </div>
-		                            <a href="blog-single.html" class="btn color1 small"><?php the_sub_field('blog-read-on') ?></a>
+		                            <a href="<?php echo $recent["guid"]; ?>" class="btn color1 small">Read On</a>
 		                        </div>
 		                    </div>
-		                </div>
-		                <?php endwhile; ?>
-						<?php endif; ?>
-		                
+		                <?php }; ?>
+
 		            </div> <!-- .wrapper -->
 		        </div> <!-- .content-container -->
 
