@@ -19,16 +19,19 @@
 		<?php endif; ?>
 
 		<?php if ( is_single() ) : ?>
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<h2 class="title blog-single center-text padding-small"><?php the_title(); ?></h2>
 		<?php else : ?>
 		<h1 class="entry-title">
 			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h1>
 		<?php endif; // is_single() ?>
 
+		<div class="meta">
+	        <?php twentythirteen_entry_meta(); ?>
+	    </div>
+
 		<div class="entry-meta">
-			<?php twentythirteen_entry_meta(); ?>
-			<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
+			
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
@@ -37,7 +40,7 @@
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
-	<div class="entry-content">
+	
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
@@ -47,7 +50,7 @@
 
 			wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) );
 		?>
-	</div><!-- .entry-content -->
+	<!-- .entry-content -->
 	<?php endif; ?>
 
 	<footer class="entry-meta">
