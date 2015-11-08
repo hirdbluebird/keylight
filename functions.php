@@ -602,3 +602,5 @@ add_action( 'wp_enqueue_scripts', 'twentythirteen_scripts_styles' );
 //     <link rel="stylesheet" href="">
 //     <link rel="stylesheet" href="">
 
+
+add_image_size( 'custom-size', 480, 360 ); 

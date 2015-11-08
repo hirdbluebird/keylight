@@ -39,6 +39,16 @@
         <div class="nav-container fixednonstop">
             <div class="wrapper">
                 <a href="#" class="logo top"><img src="<?php if ( get_field('logo', get_the_ID()) != '' ) { the_field('logo', get_the_ID()); } ?>" height="47" width="145" alt=""></a>
+                <?php  $args = array(
+                        'theme_location'  => 'primary',
+                        'container'       => 'nav',
+                        'container_class' => 'mainnav',
+                        'container_id'    => 'mainnav',
+
+                ); ?>
+
+                 <?php wp_nav_menu( $args ); ?> 
+
                 <nav id="mainnav" class="mainnav">
                     <ul>
                         <li><a href="index.html#start" class="external">Start</a></li>
@@ -61,6 +71,19 @@
         <div class="nav-container">
             <div class="wrapper">
                 <a href="#" class="logo top"><img src="<?php if ( get_field('logo', get_the_ID()) != '' ) { the_field('logo', get_the_ID()); } ?>" height="47" width="145" alt=""></a>
+
+
+                  <?php  $args = array(
+                        'theme_location'  => 'primary',
+                        'container'       => 'nav',
+                        'container_class' => 'mainnav',
+                        'container_id'    => 'mainnav',
+
+                ); ?>
+
+                 <?php wp_nav_menu( $args ); ?> 
+
+                
                 <nav id="mainnav" class="mainnav">
                     <ul>
                         <li><a href="#start">Start</a></li>
