@@ -277,8 +277,12 @@ function twentythirteen_post_nav() {
 endif;
 
 if ( ! function_exists( 'twentythirteen_entry_meta' ) ) :
+
 /**
  * Print HTML with meta information for current post: categories, tags, permalink, author, and date.
+ * POSTED ON 15TH SEPTEMBER 2013 BY JOHN DOE IN CATEGORY | 55 COMMENTS
+ *
+ *
  *
  * Create your own twentythirteen_entry_meta() to override in a child theme.
  *
@@ -294,7 +298,7 @@ function twentythirteen_entry_meta() {
 	// Translators: used between list items, there is a space after the comma.
 	$categories_list = get_the_category_list( __( ', ', 'twentythirteen' ) );
 	if ( $categories_list ) {
-		echo '<span class="categories-links">' . $categories_list . '</span>';
+		echo '<span class="categories-links"> IN ' . $categories_list . '</span> | <span class="comments-number-x"' . comments_number( 'NO COMMENTS', 'ONE COMMENT', '% COMMENTS' ) . '</span>';
 	}
 
 	// Translators: used between list items, there is a space after the comma.
@@ -305,7 +309,7 @@ function twentythirteen_entry_meta() {
 
 	// Post author
 	if ( 'post' == get_post_type() ) {
-		printf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
+		printf( ' <span class="author vcard"> BY <a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_attr( sprintf( __( 'View all posts by %s', 'twentythirteen' ), get_the_author() ) ),
 			get_the_author()
@@ -331,7 +335,7 @@ function twentythirteen_entry_date( $echo = true ) {
 	else
 		$format_prefix = '%2$s';
 
-	$date = sprintf( '<span class="date"><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a></span>',
+	$date = sprintf( '<span class="date">POSTED ON <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a></span>',
 		esc_url( get_permalink() ),
 		esc_attr( sprintf( __( 'Permalink to %s', 'twentythirteen' ), the_title_attribute( 'echo=0' ) ) ),
 		esc_attr( get_the_date( 'c' ) ),

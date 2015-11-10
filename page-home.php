@@ -264,7 +264,7 @@ get_header(); ?>
 		                                </div>
 		                            </header>
 		                            <div class="entry">
-		                                <p><?php echo $recent["post_content"]; ?></p>
+		                                <p><?php echo $recent["post_excerpt"]; ?></p>
 		                            </div>
 		                            <a href="<?php echo $recent["guid"]; ?>" class="btn color1 small">Read On</a>
 		                        </div>
@@ -275,7 +275,16 @@ get_header(); ?>
 		        </div> <!-- .content-container -->
 
 
-		        <div id="themap" class="map"></div>
+		        <!-- <div id="themap" class="map"></div> -->
+
+		        <?php $location = get_field('maps');
+
+				if( !empty($location) ):
+				?>
+				<div  id="themap" class="acf-map map">
+					<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+				</div>
+				<?php endif; ?>
 
 				<?php the_content(); ?>
 			

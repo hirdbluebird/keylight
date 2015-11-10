@@ -28,17 +28,17 @@
     <?php wp_head(); ?>
 </head>
 
-<body data-nicescroll="1" class="loading" <?php body_class(); ?>>
+<body data-nicescroll="1" class="loading <?php body_class(); ?>">
     <!-- <div class="globalpreloader"></div> -->
     <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
 
-    <?php if ( is_single() ) { ?> 
+    <?php if ( is_single() || is_home() ) { ?> 
 
         <div class="nav-container fixednonstop">
             <div class="wrapper">
-                <a href="#" class="logo top"><img src="<?php if ( get_field('logo', get_the_ID()) != '' ) { the_field('logo', get_the_ID()); } ?>" height="47" width="145" alt=""></a>
+                <a href="#" class="logo top"><img src="<?php if ( get_field('logo', 'option') != '' ) { the_field('logo', 'option'); } ?>" height="47" width="145" alt=""></a>
                 <?php  $args = array(
                         'theme_location'  => 'primary',
                         'container'       => 'nav',
@@ -49,20 +49,6 @@
 
                  <?php wp_nav_menu( $args ); ?> 
 
-                <nav id="mainnav" class="mainnav">
-                    <ul>
-                        <li><a href="index.html#start" class="external">Start</a></li>
-                        <li><a href="index.html#work" class="external">Work</a></li>
-                        <li><a href="index.html#us" class="external">Us</a></li>
-                        <li><a href="index.html#products" class="external">Slider</a></li>
-                        <li><a href="index.html#pricing" class="external">Prices</a></li>
-                        <li><a href="index.html#blog" class="external">Blog</a></li>
-                        <li><a href="index.html#video" class="external">Video</a></li>
-                        <li><a href="index.html#contact" class="external">Contact</a></li>
-                        <li><a href="elements.html" class="external">Elements</a></li>
-                        <li><a href="portfolio-single.html" class="external">Single</a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
 
@@ -70,7 +56,7 @@
 
         <div class="nav-container">
             <div class="wrapper">
-                <a href="#" class="logo top"><img src="<?php if ( get_field('logo', get_the_ID()) != '' ) { the_field('logo', get_the_ID()); } ?>" height="47" width="145" alt=""></a>
+                <a href="#" class="logo top"><img src="<?php if ( get_field('logo', 'option') != '' ) { the_field('logo', 'option'); } ?>" height="47" width="145" alt=""></a>
 
 
                   <?php  $args = array(
@@ -83,21 +69,6 @@
 
                  <?php wp_nav_menu( $args ); ?> 
 
-                
-                <nav id="mainnav" class="mainnav">
-                    <ul>
-                        <li><a href="#start">Start</a></li>
-                        <li><a href="#work">Work</a></li>
-                        <li><a href="#us">Us</a></li>
-                        <li><a href="#products">Slider</a></li>
-                        <li><a href="#pricing">Prices</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#video">Video</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="elements.html" class="external">Elements</a></li>
-                        <li><a href="portfolio-single.html" class="external">Single</a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
 

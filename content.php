@@ -39,6 +39,12 @@
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
+	<?php endif; ?>
+
+	<?php if ( is_home() ) : // Only display Excerpts for Search ?>
+	<div class="entry-summary">
+		<?php the_excerpt(); ?>
+	</div><!-- .entry-summary -->
 	<?php else : ?>
 	
 		<?php
@@ -52,6 +58,8 @@
 		?>
 	<!-- .entry-content -->
 	<?php endif; ?>
+
+
 
 	<footer class="entry-meta">
 		<?php if ( comments_open() && ! is_single() ) : ?>
