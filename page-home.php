@@ -69,6 +69,15 @@ get_header(); ?>
 		                <div class="gallery clearfix">
 		                	<?php if( have_rows('work-slider') ): ?>
 		                    <?php while( have_rows('work-slider') ): the_row(); ?>
+
+		                    	<?php $image_attributes = wp_get_attachment_image_src( the_sub_field('work-full-image') ); // returns an array
+		                    	var_dump( $image_attributes );
+								if( $image_attributes ) {
+								?> 
+								<img src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>">
+								<?php } ?>
+
+
   		                    <div data-id="<?php the_sub_field('work-item-id'); ?>" class="item print">
   		                    	<a href="<?php the_sub_field('work-full-image'); ?>" data-lightbox-gallery="gallery1" 
   		                    	   data-title="<?php the_sub_field('work-name'); ?>" 
