@@ -608,3 +608,6 @@ add_action( 'wp_enqueue_scripts', 'twentythirteen_scripts_styles' );
 
 
 add_image_size( 'custom-size', 480, 360 ); 
+add_image_size( 'custom-size290', 290, 290 ); 
+add_image_size( 'custom-size1140', 1140, 540 ); 
+add_image_size( 'custom-size', 480, 360 ); 
