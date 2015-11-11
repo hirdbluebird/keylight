@@ -271,7 +271,7 @@ p.quote {
 }
 .white .btn.borderonly,
 .grey .btn.borderonly {
-  color: #6b6b6b !important;
+  color: #6b6b6b;
   border-color: #6b6b6b;
 }
 .white .btn.borderonly:hover,

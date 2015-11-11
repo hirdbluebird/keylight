@@ -38,7 +38,7 @@
 
         <div class="nav-container fixednonstop">
             <div class="wrapper">
-                <a href="#" class="logo top"><img src="<?php if ( get_field('logo', 'option') != '' ) { the_field('logo', 'option'); } ?>" height="47" width="145" alt=""></a>
+                <a href="google.com" target="_blank" class="logo top"><img src="<?php if ( get_field('logo', 'option') != '' ) { the_field('logo', 'option'); } ?>" height="47" width="145" alt=""></a>
                 <?php  $args = array(
                         'theme_location'  => 'primary',
                         'container'       => 'nav',
@@ -56,7 +56,7 @@
 
         <div class="nav-container">
             <div class="wrapper">
-                <a href="#" class="logo top"><img src="<?php if ( get_field('logo', 'option') != '' ) { the_field('logo', 'option'); } ?>" height="47" width="145" alt=""></a>
+                <a href="google.com" class="logo top"><img src="<?php if ( get_field('logo', 'option') != '' ) { the_field('logo', 'option'); } ?>" height="47" width="145" alt=""></a>
 
 
                   <?php  $args = array(
@@ -73,3 +73,7 @@
         </div>
 
     <?php }; ?>
+
+
+
+
