@@ -68,7 +68,7 @@ get_header(); ?>
 		            <?php if( have_rows('work-slider') ): ?>
 	                    <?php while( have_rows('work-slider') ): the_row(); ?>
 
-                	   	    <?php $image_attributes = wp_get_attachment_image_src( get_sub_field('work-thumbnails'), 'full'); // returns an array  ?>
+                	   	    <?php $image_attributes = wp_get_attachment_image_src( get_sub_field('work-thumbnails'), 'work-thumbnails-size'); // returns an array  ?>
 	                 	    <?php echo var_dump($image_attributes); ?>
 
                  	    <?php endwhile; ?>
@@ -93,16 +93,18 @@ get_header(); ?>
 		                	<?php if( have_rows('work-slider') ): ?>
 		                    <?php while( have_rows('work-slider') ): the_row(); ?>
 
-		                    <?php echo get_sub_field('work-thumbnails'); ?>
-	                    	<?php $image_attributes = wp_get_attachment_image_src( the_sub_field('work-thumbnails'), 'full'); // returns an array  ?>
+		                    	<?php add_image_size( 'work-thumbnails-size', 120, 80 ); ?>
+			                    <?php echo get_sub_field('work-thumbnails'); ?>
+		                    	<?php $image_attributes = wp_get_attachment_image_src( the_sub_field('work-thumbnails'), 'work-thumbnails-size'); // returns an array  ?>
 
-  		                    <div data-id="<?php the_sub_field('work-item-id'); ?>" class="item print">
-  		                    	<a href="<?php the_sub_field('work-full-image'); ?>" data-lightbox-gallery="gallery1" 
-  		                    	   data-title="<?php the_sub_field('work-name'); ?>" 
-  		                    	   data-caption="<?php the_sub_field('work-description'); ?>">
-  		                    	<img src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>">
-  		                    	</a>
-  		                    </div>
+	  		                    <div data-id="<?php the_sub_field('work-item-id'); ?>" class="item print">
+	  		                    	<a href="<?php the_sub_field('work-full-image'); ?>" data-lightbox-gallery="gallery1" 
+	  		                    	   data-title="<?php the_sub_field('work-name'); ?>" 
+	  		                    	   data-caption="<?php the_sub_field('work-description'); ?>">
+	  		                    	<img src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>">
+	  		                    	</a>
+	  		                    </div>
+
   		                    <?php endwhile; ?>
   		                	<?php endif; ?>
 
