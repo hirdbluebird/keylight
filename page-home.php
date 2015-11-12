@@ -70,9 +70,8 @@ get_header(); ?>
 		                	<?php if( have_rows('work-slider') ): ?>
 		                    <?php while( have_rows('work-slider') ): the_row(); ?>
 
-		                    <?php $image_ID_work_slider = the_sub_field('work-thumbnails'); ?>
-		                    <?php $some_ID = $image_ID_work_slider[0]; ?>
-	                    	<?php $image_attributes = wp_get_attachment_image_src( $some_ID, 'work-thumbnails-size'); // returns an array  ?>
+
+	                    	<?php $image_attributes = wp_get_attachment_image_src( 48, 'work-thumbnails-size'); // returns an array  ?>
 
   		                    <div data-id="<?php the_sub_field('work-item-id'); ?>" class="item print">
   		                    	<a href="<?php the_sub_field('work-full-image'); ?>" data-lightbox-gallery="gallery1" 
@@ -88,10 +87,7 @@ get_header(); ?>
 		                <a href="#" class="nav prev color2" id="portfolioprev">prev</a>
 		                <a href="#" class="nav next color2" id="portfolionext">next</a>
 		            </div>
-		            		<?php $image_attributes = wp_get_attachment_image_src( the_sub_field('work-thumbnails') ); // returns an array
-	                  
-							?> 
-  		                	<?php echo var_dump( $image_attributes ); ?>
+		            		
 		            <div class="wrapper padding-tiny">
 		                <div class="center-text">
 		                    <p class="bigger width70 center mb40"><?php if ( get_field('work-text', get_the_ID()) != '' ) { the_field('work-text', get_the_ID()); } ?></p>
