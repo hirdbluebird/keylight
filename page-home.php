@@ -70,12 +70,11 @@ get_header(); ?>
 		            	<?php if( have_rows('work-slider') ): ?>
 		                    <?php while( have_rows('work-slider') ): the_row(); ?>
 
-		                    <?php echo get_sub_field('work-thumbnails'); ?>
-	                    	<?php $image_attributes = wp_get_attachment_image_src( the_sub_field('work-thumbnails'), 'work-thumbnails-size'); // returns an array  ?>
-
-  		                    <?php var_dump($image_attributes); ?>
+	                    	   <?php $image_attributes = wp_get_attachment_image_src( the_sub_field('work-thumbnails'), 'work-thumbnails-size'); // returns an array  ?>
+  		                 	   <?php echo var_dump($image_attributes); ?>
+  		                 	   
   		                    <?php endwhile; ?>
-  		                	<?php endif; ?>
+	                	<?php endif; ?>
 
 
 
