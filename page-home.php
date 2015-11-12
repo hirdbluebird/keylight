@@ -65,15 +65,15 @@ get_header(); ?>
 		            </div> <!-- .wrapper -->
 		            <div class="gallerycont">
 		            	
+		            <?php if( have_rows('work-slider') ): ?>
+	                    <?php while( have_rows('work-slider') ): the_row(); ?>
 
-	                    	   <?php $image_attributes = wp_get_attachment_image_src(48); // returns an array  ?>
-  		                 	   <?php echo var_dump($image_attributes); ?>
-
-  		                 	   <?php $image_attributes = wp_get_attachment_image_src(49); // returns an array  ?>
-  		                 	   <?php echo var_dump($image_attributes); ?>
-
-  		                 	   <?php $image_attributes = wp_get_attachment_image_src(78); // returns an array  ?>
-  		                 	   <?php echo var_dump($image_attributes); ?>
+                	   	    <?php $image_attributes = wp_get_attachment_image_src( get_sub_field('work-thumbnails')); // returns an array  ?>
+	                 	    <?php echo var_dump($image_attributes); ?>
+	                 	    
+                 	    <?php endwhile; ?>
+                	<?php endif; ?>
+	                 	   
 
 
 
