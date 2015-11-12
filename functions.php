@@ -606,8 +606,8 @@ add_action( 'wp_enqueue_scripts', 'twentythirteen_scripts_styles' );
 //     <link rel="stylesheet" href="">
 //     <link rel="stylesheet" href="">
 
-if (function_exists( 'add_image_size') ) {
-	add_image_size( 'work-thumbnails', 480, 360 ); 
+if ( function_exists( 'add_image_size') ) {
+	add_image_size( 'work-thumbnails-size', 480, 360 ); 
 	add_image_size( 'custom-size290', 290, 290 ); 
 	add_image_size( 'custom-size1140', 1140, 540 ); 
 	add_image_size( 'custom-size', 480, 360 );

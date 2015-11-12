@@ -70,9 +70,7 @@ get_header(); ?>
 		                	<?php if( have_rows('work-slider') ): ?>
 		                    <?php while( have_rows('work-slider') ): the_row(); ?>
 
-	                    	<?php $image_attributes = wp_get_attachment_image_src( the_sub_field('work-thumbnails') ); // returns an array
-	                    	
-							?> 
+	                    	<?php $image_attributes = wp_get_attachment_image_src( the_sub_field('work-thumbnails'), 'work-thumbnails-size' ); // returns an array ?>
 
 
   		                    <div data-id="<?php the_sub_field('work-item-id'); ?>" class="item print">
