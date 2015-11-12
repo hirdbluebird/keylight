@@ -67,7 +67,8 @@ get_header(); ?>
 		            	
 		            <?php if( have_rows('work-slider') ): ?>
 	                    <?php while( have_rows('work-slider') ): the_row(); ?>
-
+	                    	
+	                    	<?php add_image_size( 'work-thumbnails-size', 120, 80 ); ?>
                 	   	    <?php $image_attributes = wp_get_attachment_image_src( get_sub_field('work-thumbnails'), 'work-thumbnails-size'); // returns an array  ?>
 	                 	    <?php echo var_dump($image_attributes); ?>
 
