@@ -67,22 +67,14 @@ get_header(); ?>
 		            	
 		            <?php if( have_rows('work-slider') ): ?>
 	                    <?php while( have_rows('work-slider') ): the_row(); ?>
-	                    	
+
 	                    	<?php add_image_size( 'work-thumbnails-size', 120, 80 ); ?>
                 	   	    <?php $image_attributes = wp_get_attachment_image_src( get_sub_field('work-thumbnails'), 'work-thumbnails-size'); // returns an array  ?>
-	                 	    <?php echo var_dump($image_attributes); ?>
+	                 	    <?php echo var_dump($image_attributes[0]); ?>
 
                  	    <?php endwhile; ?>
                 	<?php endif; ?>
 	                 	   
-
-
-
-
-
-
-
-
 
 
 
@@ -94,15 +86,13 @@ get_header(); ?>
 		                	<?php if( have_rows('work-slider') ): ?>
 		                    <?php while( have_rows('work-slider') ): the_row(); ?>
 
-		                    	<?php add_image_size( 'work-thumbnails-size', 120, 80 ); ?>
-			                    <?php echo get_sub_field('work-thumbnails'); ?>
 		                    	<?php $image_attributes = wp_get_attachment_image_src( the_sub_field('work-thumbnails'), 'work-thumbnails-size'); // returns an array  ?>
 
 	  		                    <div data-id="<?php the_sub_field('work-item-id'); ?>" class="item print">
 	  		                    	<a href="<?php the_sub_field('work-full-image'); ?>" data-lightbox-gallery="gallery1" 
 	  		                    	   data-title="<?php the_sub_field('work-name'); ?>" 
 	  		                    	   data-caption="<?php the_sub_field('work-description'); ?>">
-	  		                    	<img src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>">
+	  		                    	<img src="<?php echo $image_attributes[0]; ?>">
 	  		                    	</a>
 	  		                    </div>
 
@@ -113,6 +103,12 @@ get_header(); ?>
 		                <a href="#" class="nav prev color2" id="portfolioprev">prev</a>
 		                <a href="#" class="nav next color2" id="portfolionext">next</a>
 		            </div>
+		            		
+
+
+
+
+
 		            		
 		            <div class="wrapper padding-tiny">
 		                <div class="center-text">
