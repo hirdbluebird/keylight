@@ -276,7 +276,7 @@ p.quote {
 }
 .white .btn.borderonly:hover,
 .grey .btn.borderonly:hover {
-  border-color: #343434;
+  border: 2px solid white;
 }
 .btn.small {
   font-size: 1.7em;

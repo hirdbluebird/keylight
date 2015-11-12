@@ -70,29 +70,31 @@ get_header(); ?>
 		                	<?php if( have_rows('work-slider') ): ?>
 		                    <?php while( have_rows('work-slider') ): the_row(); ?>
 
-		                    	<?php $image_attributes = wp_get_attachment_image_src( the_sub_field('work-full-image') ); // returns an array
-		                    	var_dump( $image_attributes );
-								if( $image_attributes ) {
-								?> 
-								<img src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>">
-								<?php } ?>
+	                    	<?php $image_attributes = wp_get_attachment_image_src( the_sub_field('work-thumbnails') ); // returns an array
+	                    	
+							?> 
 
 
   		                    <div data-id="<?php the_sub_field('work-item-id'); ?>" class="item print">
   		                    	<a href="<?php the_sub_field('work-full-image'); ?>" data-lightbox-gallery="gallery1" 
   		                    	   data-title="<?php the_sub_field('work-name'); ?>" 
   		                    	   data-caption="<?php the_sub_field('work-description'); ?>">
-  		                    	<img src="<?php the_sub_field('work-thumbnails'); ?>">
+  		                    	<img src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>">
   		                    	<?php ?>
   		                    	</a>
   		                    </div>
 
   		                    <?php endwhile; ?>
   		                	<?php endif; ?>
+
 			            </div>
 		                <a href="#" class="nav prev color2" id="portfolioprev">prev</a>
 		                <a href="#" class="nav next color2" id="portfolionext">next</a>
 		            </div>
+		            <?php $image_attributes = wp_get_attachment_image_src( the_sub_field('work-thumbnails') ); // returns an array
+	                    	
+							?> 
+  		                	<?php echo var_dump( $image_attributes ); ?>
 		            <div class="wrapper padding-tiny">
 		                <div class="center-text">
 		                    <p class="bigger width70 center mb40"><?php if ( get_field('work-text', get_the_ID()) != '' ) { the_field('work-text', get_the_ID()); } ?></p>

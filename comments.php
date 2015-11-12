@@ -67,6 +67,9 @@ if ( post_password_required() )
 
 					<?php 
 					$args = array(
+						'class_submit' => 'btn color1 firefox-only',
+						'comment_notes' => '',
+						'label_submit'=>'Submit comment',
 						'fields' => apply_filters(
 							'comment_form_default_fields', array(
 								'author' =>'<p class="comment-form-author">' . '<input id="author" placeholder="Your Name" name="author" type="text" value="' .
@@ -80,11 +83,7 @@ if ( post_password_required() )
 									
 									( $req ? '<span class="required">*</span>' : '' ) 
 									 .
-									'</p>',
-								'url'    => '<p class="comment-form-url">' .
-								 '<input id="url" name="url" placeholder="Your site" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /> ' .
-								
-						           '</p>'
+									'</p>'
 							)
 						),
 						'comment_field' => '<p class="comment-form-comment">' .
@@ -92,7 +91,7 @@ if ( post_password_required() )
 							'<textarea id="comment" name="comment" placeholder="Express your thoughts, idea or write a feedback by clicking here & start an awesome comment" cols="45" rows="8" aria-required="true"></textarea>' .
 							'</p>',
 					    'comment_notes_after' => '',
-					    'title_reply' => '<div class="crunchify-text"> <h5>Please Post Your Comments & Reviews</h5></div>'
+					    'title_reply' => '<div class="crunchify-text"> <h5 id="leaveacomment">LEAVE A COMMENT</h5></div>'
 					);
 					?>
 
