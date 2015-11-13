@@ -60,63 +60,39 @@ get_header(); ?>
 
 
 		        <div id="work" class="section content-container white">
-		            <div class="wrapper">
-		                <h2 class="title center-text padding-small"><?php if ( get_field('work-title', get_the_ID()) != '' ) { the_field('work-title', get_the_ID()); } ?></h2>
-		            </div> <!-- .wrapper -->
-		            <div class="gallerycont">
-		            	
-		            <?php if( have_rows('work-slider') ): ?>
-	                    <?php while( have_rows('work-slider') ): the_row(); ?>
+				    <div class="wrapper">
+				        <h2 class="title center-text padding-small"><?php if ( get_field('work-title', get_the_ID()) != '' ) { the_field('work-title', get_the_ID()); } ?></h2>
+				    </div> <!-- .wrapper -->
+				    <div class="gallerycont">
+					    <div class="gallery clearfix">
+					        <?php if( have_rows('work-slider') ): ?>
+				            <?php while( have_rows('work-slider') ): the_row(); ?>
 
-	                    	<?php add_image_size( 'work-thumbnails-size', 120, 80 ); ?>
-                	   	    <?php $image_attributes = wp_get_attachment_image_src( get_sub_field('work-thumbnails'), 'work-thumbnails-size'); // returns an array  ?>
-	                 	    <?php echo var_dump($image_attributes[0]); ?>
-
-                 	    <?php endwhile; ?>
-                	<?php endif; ?>
-	                 	   
-
-
-
-
-
-
-		                <!-- <div id="gallerynav" class="carousel-pagination gallery-nav inverse"></div> -->
-		                <div class="gallery clearfix">
-		                	<?php if( have_rows('work-slider') ): ?>
-		                    <?php while( have_rows('work-slider') ): the_row(); ?>
-
-		                    	<?php $image_attributes = wp_get_attachment_image_src( the_sub_field('work-thumbnails'), 'work-thumbnails-size'); // returns an array  ?>
-
-	  		                    <div data-id="<?php the_sub_field('work-item-id'); ?>" class="item print">
-	  		                    	<a href="<?php the_sub_field('work-full-image'); ?>" data-lightbox-gallery="gallery1" 
-	  		                    	   data-title="<?php the_sub_field('work-name'); ?>" 
+					             
+				            <?php $image_attributes = wp_get_attachment_image_src( get_sub_field('work-thumbnails'), 'work-thumbnails-size'); // returns an array  ?>
+				            <div data-id="<?php the_sub_field('work-item-id'); ?>" class="item print">
+		                    	<a href="<?php the_sub_field('work-full-image'); ?>" data-lightbox-gallery="gallery1" 
+			                    	   data-title="<?php the_sub_field('work-name'); ?>" 
 	  		                    	   data-caption="<?php the_sub_field('work-description'); ?>">
-	  		                    	<img src="<?php echo $image_attributes[0]; ?>">
-	  		                    	</a>
-	  		                    </div>
-
-  		                    <?php endwhile; ?>
-  		                	<?php endif; ?>
-
-			            </div>
+				            		<img src="<?php echo $image_attributes[0]; ?>" />
+			            		</a>
+			            	</div>
+					        <?php endwhile; ?>
+						    <?php endif; ?>
+						</div>
 		                <a href="#" class="nav prev color2" id="portfolioprev">prev</a>
 		                <a href="#" class="nav next color2" id="portfolionext">next</a>
 		            </div>
-		            		
 
-
-
-
-
-		            		
-		            <div class="wrapper padding-tiny">
+	                <div class="wrapper padding-tiny">
 		                <div class="center-text">
 		                    <p class="bigger width70 center mb40"><?php if ( get_field('work-text', get_the_ID()) != '' ) { the_field('work-text', get_the_ID()); } ?></p>
 		                        <a href="#contact" class="btn scrolltoslow mb50 color1"><?php if ( get_field('work-button', get_the_ID()) != '' ) { the_field('work-button', get_the_ID()); } ?></a>
 		                </div>
 		            </div>
 		        </div> <!-- .content-container -->
+						            		
+
 
 		        <div id="quote" class="container-group" style="background-image: url(<?php the_field('quotes-background', get_the_ID()) ?>)">
 		            <div class="content-container">
