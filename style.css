@@ -3289,3 +3289,18 @@ footer.entry-meta {
 	background: none!important;
 	color: white!important;
 }
+.nav-menu {
+	width: 100%;
+	background: black;
+	color: white;
+	height: 68px;
+}
+.nav-list {
+	text-transform: uppercase;
+	float: left;
+}
+.menu-link {
+	color: white!important;
+	font-family: 'Ostrich Sans', Helvetica, sans-serif;
+	padding: 0px 0px 0px 20px;
+}

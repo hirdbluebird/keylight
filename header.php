@@ -36,21 +36,18 @@
     <div class="globalpreloader"></div>
     <?php if ( is_single() || is_home() ) { ?> 
 
-        <div class="nav-container fixednonstop">
+        <div class="nav-menu">
             <div class="wrapper">
                 <a href="" class="logo top"><img src="<?php if ( get_field('logo', 'option') != '' ) { the_field('logo', 'option'); } ?>" height="47" width="145" alt=""></a>
-                <?php  $args = array(
-                        'theme_location'  => 'primary',
-                        'container'       => 'nav',
-                        'container_class' => 'mainnav',
-                        'container_id'    => 'mainnav',
-                        'container'       => 'nav',
-                        'container_class' => 'mainnav',
-                        'container_id'    => 'mainnav',
-                ); ?>
-
-                 <?php wp_nav_menu( $args ); ?> 
-
+                <ul class="nav-list">
+                    <li class="menu-cell"><a class="menu-link"href="">start</a></li>
+                    <li class="menu-cell"><a class="menu-link"href="">work</a></li>
+                    <li class="menu-cell"><a class="menu-link"href="">us</a></li>
+                    <li class="menu-cell"><a class="menu-link"href="">slider</a></li>
+                    <li class="menu-cell"><a class="menu-link"href="">prices</a></li>
+                    <li class="menu-cell"><a class="menu-link"href="">blog</a></li>
+                    <li class="menu-cell"><a class="menu-link"href="">contact</a></li>
+                </ul>
             </div>
         </div>
 
