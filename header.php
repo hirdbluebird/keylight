@@ -38,15 +38,15 @@
 
         <div class="nav-menu">
             <div class="wrapper">
-                <a href="" class="logo top"><img src="<?php if ( get_field('logo', 'option') != '' ) { the_field('logo', 'option'); } ?>" height="47" width="145" alt=""></a>
+                <a href="" class="logo top nav-menu-logo"><img src="<?php if ( get_field('logo', 'option') != '' ) { the_field('logo', 'option'); } ?>" height="47" width="145" alt=""></a>
                 <ul class="nav-list">
-                    <li class="menu-cell"><a class="menu-link"href="">start</a></li>
-                    <li class="menu-cell"><a class="menu-link"href="">work</a></li>
-                    <li class="menu-cell"><a class="menu-link"href="">us</a></li>
-                    <li class="menu-cell"><a class="menu-link"href="">slider</a></li>
-                    <li class="menu-cell"><a class="menu-link"href="">prices</a></li>
-                    <li class="menu-cell"><a class="menu-link"href="">blog</a></li>
-                    <li class="menu-cell"><a class="menu-link"href="">contact</a></li>
+                    <li class="menu-cell"><a class="menu-link" href="http://clients.netweightit.com/keylight/home-page/#start">start</a></li>
+                    <li class="menu-cell"><a class="menu-link" href="http://clients.netweightit.com/keylight/home-page/#work">work</a></li>
+                    <li class="menu-cell"><a class="menu-link" href="http://clients.netweightit.com/keylight/home-page/#us">us</a></li>
+                    <li class="menu-cell"><a class="menu-link" href="http://clients.netweightit.com/keylight/home-page/#products">slider</a></li>
+                    <li class="menu-cell"><a class="menu-link" href="http://clients.netweightit.com/keylight/home-page/#pricing">prices</a></li>
+                    <li class="menu-cell"><a class="menu-link" href="http://clients.netweightit.com/keylight/home-page/#blog">blog</a></li>
+                    <li class="menu-cell"><a class="menu-link" href="http://clients.netweightit.com/keylight/home-page/#contact">contact</a></li>
                 </ul>
             </div>
         </div>

@@ -3294,13 +3294,26 @@ footer.entry-meta {
 	background: black;
 	color: white;
 	height: 68px;
+	position: fixed;
+	text-align: middle!important;
+	padding: auto auto!important;
 }
 .nav-list {
 	text-transform: uppercase;
-	float: left;
+	float: right;
+	margin-top: 22px;
 }
 .menu-link {
 	color: white!important;
-	font-family: 'Ostrich Sans', Helvetica, sans-serif;
-	padding: 0px 0px 0px 20px;
+	font-family: 'Ostrich Sans', Helvetica, sans-serif!important;
+	padding: 0px 0px 0px 20px!important;
+	font-weight: 900!important;
+	font-size: 20px!important;
+}
+.menu-link:hover {
+	background: none!important;
+	color: #18c08f!important;
+}
+.nav-menu-logo {
+	margin-top: 10px;
 }
