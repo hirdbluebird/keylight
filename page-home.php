@@ -159,8 +159,9 @@ get_header(); ?>
 		                    <div class="third">
 		                        <div class="about">
 		                            <a class="circle">
+		                            	<?php $image_attributes = wp_get_attachment_image_src( get_sub_field('employee-image'), 'employee-position-size'); ?>
 		                                <span class="overlay"><span class="inner"><span class="text"><?php the_sub_field('employee-position'); ?></span></span></span>
-		                                <img src="<?php the_sub_field('employee-image') ?>">
+		                                <img src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[2]; ?>" height="<?php echo $image_attributes[1]; ?>" />
 		                            </a>
 		                            <h3><?php the_sub_field('employee-name'); ?></h3>
 		                            <div class="social">

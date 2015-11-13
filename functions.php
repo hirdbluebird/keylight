@@ -608,7 +608,7 @@ add_action( 'wp_enqueue_scripts', 'twentythirteen_scripts_styles' );
 
 if ( function_exists( 'add_image_size') ) {
 	add_image_size( 'work-thumbnails-size', 360, 480 ); 
-	add_image_size( 'custom-size290', 290, 290 ); 
+	add_image_size( 'employee-position-size', 290, 290 ); 
 	add_image_size( 'custom-size1140', 1140, 540 ); 
 	add_image_size( 'custom-size', 480, 360 );
 } 
