@@ -3317,3 +3317,7 @@ footer.entry-meta {
 .nav-menu-logo {
 	margin-top: 10px;
 }
+.acf-map {
+	width: 100%;
+	min-height: 200px;
+}
