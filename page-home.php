@@ -74,7 +74,7 @@ get_header(); ?>
 		                    	<a href="<?php the_sub_field('work-full-image'); ?>" data-lightbox-gallery="gallery1" 
 			                    	   data-title="<?php the_sub_field('work-name'); ?>" 
 	  		                    	   data-caption="<?php the_sub_field('work-description'); ?>">
-				            		<img src="<?php echo $image_attributes[0]; ?>" />
+				            		<img src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>" >
 			            		</a>
 			            	</div>
 					        <?php endwhile; ?>
